@@ -1,0 +1,12 @@
+{
+"env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "Swal": "readonly"
+  },
+  "rules": {
+    "no-console": "off"
+  }
+}
