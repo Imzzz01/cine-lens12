@@ -154,7 +154,13 @@ function getMovieDetails(imdbID) {
 
     success: function(data){
         console.log('Movie Details Response:', data);
+        if(data.Response === "True"){
         showMovieDetails(data);
+        fetchTrailer(data.Title);
+    } else {
+        $('#movie-details').html('<p>Movie details not found.</p>');
+    
+    }
     
         },
     
@@ -165,6 +171,62 @@ error: function(){
     });
 
 }
+
+function fetchTrailer(movieTitle) {
+    $.ajax({
+        url:`https://www.omdbapi.com/`,
+        method: 'GET',
+        data:{
+             part: 'snippet',
+             q: `${movieTitle}trailer`,
+             type:'video',
+             apikey: '2fee485b'
+        },
+    
+        success: function(response){
+            
+            const videoId = response.items[0]?.id?.videoId;
+            if (videoId) {
+                const trailerEmbed = `
+                <h4>Watch the Trailer:</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+               allowfullscreen></iframe>
+            `;
+            $('#movie-details').append(trailerEmbed);
+            }else{
+                $('#movie-details').append('<p>No trailer found. </p>');
+            }
+        },
+
+        error: function(){
+            $('#movie-details').append('<p>Error fetching trailer. Please try again later.</p>');
+        }
+
+        });
+
+
+            
+            
+            console.log('Movie Details Response:', data);
+            if(data.Response === "True"){
+            showMovieDetails(data);
+            fetchTrailer(data.Title);
+        } else {
+            $('#movie-details').html('<p>Movie details not found.</p>');
+        
+        }
+        
+            },
+        
+        
+    error: function(){
+        $('#movie-results').html('<p>Error fetching movie details. Please try again later.</p>');
+    }
+        });
+    
+    }
+
 
 function showMovieDetails(movie) {
    
