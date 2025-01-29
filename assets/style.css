@@ -146,6 +146,12 @@ body.dark-mode#movie-search {
     color: white; /*white text color in dark mode*/
 }
 
+.carousel-item img{
+    height: 400px; /*set a max height to control the image size*/
+    object-fit: cover;/*ensure the image covers the area without distorting*/
+    width: 100px;/*makes sure the image takes full width of the container*/
+}
+
 @media screen and (max-width: 768px){
     .movie-card{
         max-width: 100%; /*allow the card to take full width*/

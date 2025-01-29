@@ -1,7 +1,66 @@
 
 const OMDbApiKey = '2fee485b';
 
+$(document).ready(function() {
 
+    loadRecommendedMovies();
+
+
+});
+
+function loadRecommendedMovies() {
+    const recommendedMovies = [
+        {title: "Extraordinary You", imdbID: "tt10826102" },
+        {title: "Crash Landing on you", imdbID: "tt10850932"},
+        {title: "Destined With You", imdbID: "tt27974068"},
+        {title: "All Of Us Are Dead", imdbID: "tt14169960"},
+        {title: "Love Next Door", imdbID: "tt30446769"},
+        {title: "Alchemy of souls", imdbID: "tt20859920"},
+        {title: "Tomorrow", imdbID: "tt18926162"},
+        {title: "Sweet Home", imdbID: "tt11612120"},
+        
+    
+    ];
+   
+    const carouselInner = $('#recommended-carousel-inner');
+    carouselInner.empty();
+
+    recommendedMovies.forEach((movie, index) => {
+        $.ajax({
+            url:`https://www.omdbapi.com/`,
+            method: 'GET',
+            data:{
+                 i: movie.imdbID,
+                 apikey: '2fee485b'
+            },
+    
+            success: function(data){
+                
+                let poster = data.Poster !== "N/A" ? data.Poster : './assets/images/default.jpg';
+                    
+
+                    const activeClass = index === 0 ? "active" : "";
+                    const movieItem =`
+                    <div class="carousel-item ${activeClass}">
+                    <img src="${poster}" class="d-block w-100" alt="${movie.title}" style="max-width: 300px; margin: auto;">
+                     <div class="carousel-caption d-none d-md-block">
+                   <h5>${movie.title}</h5>
+                   <button class="btn btn-outline-light" onclick="getMovieDetails('${movie.imdbID}')">View Details</button>
+
+         </div>
+         </div>
+         `;
+         carouselInner.append(movieItem);
+
+            },      
+    error: function(){
+       console.log("Error fetching movie data");
+    }
+        });
+    });
+}
+
+    
 $(document).ready(function() {
 
     if(localStorage.getItem('dark-mode')==='enabled'){
