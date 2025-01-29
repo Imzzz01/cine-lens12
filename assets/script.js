@@ -174,13 +174,13 @@ error: function(){
 
 function fetchTrailer(movieTitle) {
     $.ajax({
-        url:`https://www.omdbapi.com/`,
+        url:`https://www.googleapis.com/youtube/v3/search`,
         method: 'GET',
         data:{
              part: 'snippet',
-             q: `${movieTitle}trailer`,
-             type:'video',
-             apikey: '2fee485b'
+             q: `${movieTitle} trailer`,
+             type: 'video',
+             key: 'AIzaSyDnw9QhSAomQ46lydMI_JDp-a8VVzFThV4'
         },
     
         success: function(response){
@@ -204,27 +204,6 @@ function fetchTrailer(movieTitle) {
         }
 
         });
-
-
-            
-            
-            console.log('Movie Details Response:', data);
-            if(data.Response === "True"){
-            showMovieDetails(data);
-            fetchTrailer(data.Title);
-        } else {
-            $('#movie-details').html('<p>Movie details not found.</p>');
-        
-        }
-        
-            },
-        
-        
-    error: function(){
-        $('#movie-results').html('<p>Error fetching movie details. Please try again later.</p>');
-    }
-        });
-    
     }
 
 
