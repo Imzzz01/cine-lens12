@@ -1,11 +1,24 @@
 
 const OMDbApiKey = '2fee485b';
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     loadRecommendedMovies();
 
-
+$('#search-btn').click(function () {
+    const query = $('#movie-search').val().trim();
+    if (query !== "") {
+          searchMovie(query);
+          $('#recommended-section').hide();
+}
+});
+  $('#movie-search').on('input', function () {
+    if ($(this).val().trim() === ""){
+   
+          $('#recommended-section').show();
+          $('#movie-results').empty();
+    }
+  });
 });
 
 function loadRecommendedMovies() {
@@ -93,12 +106,7 @@ function updateFavoriteCount() {
     $('#favorites-count').text(favorites.length);
 }
 
-$('#search-btn').click(function () {
-    const query = $('#movie-search').val().trim();
-    if (query !== "") {
-          searchMovie(query);
-}
-});
+
 
 function searchMovie(query) {
     $.ajax({
@@ -224,7 +232,7 @@ function showMovieDetails(movie) {
 
     `);
         $('#movie-results').hide();
-        $('#movie-details').html();
+        $('#movie-details').show();
        
     
     }
