@@ -10,13 +10,23 @@ $('#search-btn').click(function () {
     if (query !== "") {
           searchMovie(query);
           $('#recommended-section').hide();
+          $('#back-to-recommendations-btn').show();
 }
+});
+
+$('#back-to-recommendations-btn').click(function (){
+    $('#movie-results').empty();
+    $('#movie-results').empty();
+    $('#recommended-section').show();
+    $('#back-to-recommendations-btn').hide();
+
 });
   $('#movie-search').on('input', function () {
     if ($(this).val().trim() === ""){
    
           $('#recommended-section').show();
           $('#movie-results').empty();
+          $('#back-to-recommendations-btn').hide();
     }
   });
 });
