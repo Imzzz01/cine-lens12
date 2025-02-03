@@ -16,11 +16,16 @@ span {
 
 
 
+
 h1 {
     font-size: 36px; /*larger font size for the header */
     color: #333; /*set text color */
     text-align: center; /* centers the header text*/
     margin-bottom: 30px;/*adds space below the header */
+}
+
+body.dark-mode h1{
+      color: #fff;
 }
 
 #movie-search {

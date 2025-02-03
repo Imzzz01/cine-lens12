@@ -259,6 +259,7 @@ function toggleFavorite(imdbID, title) {
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
+    updateFavoriteCount();
 }
 
 function isFavorite(imdbID) {
