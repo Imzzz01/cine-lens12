@@ -77,6 +77,12 @@ Personalised Movie Recommendation:
 Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
 Integration and external API's
+
+Commit Messages: 
+![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
+![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
+
+Finished project - screenshots 
   ![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
 ![cine2](https://github.com/user-attachments/assets/b087e4d0-60b1-4e6d-bbb5-dbb9d0c9d18f)
 ![cine3](https://github.com/user-attachments/assets/552d32b0-a760-460d-a440-e1612d50a22e)
@@ -85,4 +91,4 @@ Integration and external API's
 ![cine6](https://github.com/user-attachments/assets/e75c7280-5a16-4440-8d44-12ba2451d375)
 ![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
 
-Finished project - screenshots 
+
