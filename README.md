@@ -78,6 +78,13 @@ Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
 Integration and external API's
 
+Internal or external reference:
+- Reponsiveness - https://getbootstrap.com/
+- used jquery for my project - https://jquery.com/
+- cdn used https://www.bing.com/search?q=sweetalert2%20cdn&qs=n&form=QBRE&sp=-1&lq=0&pq=&sc=0-0&sk=&cvid=0C55985B3F3B49ADB5289391744D575C&ghsh=0&ghacc=0&ghpl=
+- icons used from - https://fontawesome.com/
+- Api used - https://www.omdbapi.com/
+  
 Commit Messages: 
 ![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
@@ -90,5 +97,29 @@ Finished project - screenshots
 ![cine5](https://github.com/user-attachments/assets/0aac2b04-e034-486c-81f9-31e464e87e06)
 ![cine6](https://github.com/user-attachments/assets/e75c7280-5a16-4440-8d44-12ba2451d375)
 ![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
+
+Deployment 
+
+This project was developed by using VSCODE, committed to git and pushed to Github.
+
+To deploy this page to Github pages from it's GitHub repository.
+
+Follow these steps:
+
+1. Log into GitHub
+2. There will be a list of repositories, make sure to choose cine-lens12.
+3. From the menu, on top of the page select settings.
+4. When you have done this, scroll down to pages section.
+5. Inside the pages there will be a Build and deployment section.
+6. Under source click the drop down menu, and select 'main' make sure the drop down next to main, you have selected root.
+7. Once you have selected main, the project will be deployed.
+8. Refresh the page, and the link will displayed above on the pages section.
+
+How to run this project:
+1. Go to github repository(Sakura-haven1)
+2. Click the code button and copy the repository Url: https://github.com/Imzzz01/cine-lens12
+3. Open your terminal, and run bash
+4. Clone your repository open terminal and run git clone 
+5. Once my project opens up on VScode, run the project.
 
 
