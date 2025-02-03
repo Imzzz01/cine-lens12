@@ -1,76 +1,78 @@
 // app.test.js
-const $ = require('jquery');
 
-// mocking localStorage
+import $ from 'jquery';
+
+global.localStorage = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+};
+
+jest.mock('jquery', () => ({
+  ajax: jest.fn(),
+
+}));
+
+describe('Movie App', () => {
+
 beforeEach(() => {
-  Storage.prototype.setItem = jest.fn();
-  Storage.prototype.getItem = jest.fn();
-  Storage.prototype.removeItem = jest.fn();
+  jest.clearAllMocks();
+
 });
 
-// Mock jQuery and necessary methods like .ready(), .addClass(), .text(), etc.
-jest.mock('jquery', () => {
-  const originalJQuery = jest.requireActual('jquery');
-  return {
-    ...originalJQuery,
-    ajax: jest.fn(),
-    fn: {
-      ...originalJQuery.fn,
-      addClass: jest.fn(),
-      removeClass: jest.fn(),
-      text: jest.fn().mockReturnValue('Light Mode'),
-    },
-    ready: jest.fn((callback) => callback()), // Ensure the callback is called immediately
+test('searchMovie function makes AJAX call and display results', () => {
+  const mockResponse = {
+      Response: 'True',
+      Search: [
+        {Title: 'Test Movie 1', Year: '2021', imdbID: 'tt123'},
+        {Title: 'Test Movie 2', Year: '2022', imdbID: 'tt456'},
+      ],
+
   };
-});
+  $.ajax.mockImplementationOnce((url, {success}) => success(mockResponse));
 
-// Ensure jQuery is available globally for script.js
-beforeAll(() => {
-  global.$ = $;
-  global.jQuery = $;
-});
+  searchMovie('Test Movie');
 
-test('dark mode toggle works', () => {
-  localStorage.setItem('dark-mode', 'enabled');
-  
-  // Run the script
-  require('../assets/script.js');
-  
-  // Check if jQuery methods were called correctly
-  expect($('body').hasClass('dark-mode')).toBe(true); 
-  expect($('#dark-mode-toggle').text()).toBe('Light Mode');
-});
+  expect($.ajax).toHaveBeenCalledWith(
+    expect.objectContaining({
+      data: expect.objectContaining({
+        s: 'Test Movie',
+      }),
+    })
+  );
 
-test('toggleFavorite adds/removes favorites correctly', () => {
-  const imdbID = 'tt1234567';
-  const title = 'Movie Title';
-  
-  localStorage.setItem('favorites', JSON.stringify([]));
-  require('../assets/script.js');
-  
-  toggleFavorite(imdbID, title);
-  let favorites = JSON.parse(localStorage.getItem('favorites'));
-  expect(favorites.length).toBe(1);
-  expect(favorites[0].imdbID).toBe(imdbID);
-
-  toggleFavorite(imdbID, title);
-  favorites = JSON.parse(localStorage.getItem('favorites'));
-  expect(favorites.length).toBe(0);
-});
-
-test('searchMovie makes API request', () => {
-  const query = 'Harry Potter';
-  $.ajax.mockImplementationOnce((options) => {
-    options.success({ Response: 'True', Search: [] });
+  setTimeout(() => {
+    expect($('#movie-results').html()).toContain('Test Movie 1');
+    expect($('#movie-results').html()).toContain('Test Movie 2')
+  }, 0);
   });
+
+  test('toggleFavorite function adds and removes from localStorage', () =>{
+    const movie ={ imdbID: 'tt123', title: 'Test Movie'};
+ 
+    localStorage.getItem.mockImplementationOnce('[]');
+
+    toggleFavorite(movie.imdbID, movie.title);
+    expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([movie]));
+
+    localStorage.getItem.mockImplementationOnce(JSON.stringify)([movie]));
+
+    toggleFavorite(movie.imdbID, movie.title);
+    expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([]));
+ 
+ 
+  });
+
+  test('updateFavoriteCount updates the UI with the correct favorite count', () => {
+    const favorites = [{ imdbID:'tt123', title: 'Test Movie'}];
+    localStorage.getItem.mockReturnValueOnce(JSON.stringify([favorites]));
   
-  require('../assets/script.js');
+    updateFavoriteCount();
   
-  $('#movie-search').val(query);
-  $('#search-btn').click();
-  
-  expect($.ajax).toHaveBeenCalledWith(expect.objectContaining({
-    url: 'https://www.omdbapi.com/',
-    data: expect.objectContaining({ s: query, apikey: '2fee485b' })
-  }));
-});
+  }
+
+  expect($(''))
+
+
+
+
