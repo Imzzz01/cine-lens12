@@ -1,6 +1,16 @@
 // app.test.js
 
-import $ from 'jquery';
+const $ = require('jquery');
+
+jest.mock('jquery', () => ({
+  ajax: jest.fn(),
+  default: {
+    fn: {
+      click: jest.fn()
+    },
+    css: jest.fn(() => ({ display: 'block'}))
+  }
+}));
 
 global.localStorage = {
   getItem: jest.fn(),
@@ -8,13 +18,8 @@ global.localStorage = {
   removeItem: jest.fn(),
 };
 
-jest.mock('jquery', () => ({
-  ajax: jest.fn(),
-
-}));
-
 describe('Movie App', () => {
-
+});
 beforeEach(() => {
   jest.clearAllMocks();
 
@@ -50,12 +55,12 @@ test('searchMovie function makes AJAX call and display results', () => {
   test('toggleFavorite function adds and removes from localStorage', () =>{
     const movie ={ imdbID: 'tt123', title: 'Test Movie'};
  
-    localStorage.getItem.mockImplementationOnce('[]');
+    localStorage.getItem = jest.fn().mockImplementationOnce(() => '[]')
 
     toggleFavorite(movie.imdbID, movie.title);
     expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([movie]));
 
-    localStorage.getItem.mockImplementationOnce(JSON.stringify)([movie]));
+    localStorage.getItem = jest.fn().mockImplementationOnce(() => JSON.stringify([movie]));
 
     toggleFavorite(movie.imdbID, movie.title);
     expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([]));
@@ -65,14 +70,21 @@ test('searchMovie function makes AJAX call and display results', () => {
 
   test('updateFavoriteCount updates the UI with the correct favorite count', () => {
     const favorites = [{ imdbID:'tt123', title: 'Test Movie'}];
-    localStorage.getItem.mockReturnValueOnce(JSON.stringify([favorites]));
+    localStorage.getItem = jest.fn().mockReturnValueOnce(JSON.stringify(favorites));
   
     updateFavoriteCount();
   
-  }
+  
 
-  expect($(''))
+  expect($('#favorites-count').text()).toBe('1');
+});
+test('Back to recommendations button works', () => {
 
 
+$('#back-to-recommendations-btn').click();
 
+expect($('#recommended-section').css('display')).toBe('block');
+expect($('#movie-results').css('display')).toBe('none');
+expect($('#back-to-recommendations-btn').css('display')).toBe('none');
 
+});
