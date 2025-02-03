@@ -116,8 +116,8 @@ Follow these steps:
 8. Refresh the page, and the link will displayed above on the pages section.
 
 How to run this project:
-1. Go to github repository(Sakura-haven1)
-2. Click the code button and copy the repository Url: https://github.com/Imzzz01/cine-lens12
+1. Go to github repository(cine-lens12)
+2. Click the code button and copy the repository Url: https://imzzz01.github.io/cine-lens12/
 3. Open your terminal, and run bash
 4. Clone your repository open terminal and run git clone 
 5. Once my project opens up on VScode, run the project.
