@@ -84,10 +84,23 @@ Internal or external reference:
 - cdn used https://www.bing.com/search?q=sweetalert2%20cdn&qs=n&form=QBRE&sp=-1&lq=0&pq=&sc=0-0&sk=&cvid=0C55985B3F3B49ADB5289391744D575C&ghsh=0&ghacc=0&ghpl=
 - icons used from - https://fontawesome.com/
 - Api used - https://www.omdbapi.com/
+
+HTML and CSS validation 
+![image](https://github.com/user-attachments/assets/256e24ce-b445-4d1d-a39c-eab55aac19a8)
+![image](https://github.com/user-attachments/assets/f177ca2b-258a-4250-bd11-0d216f30899f)
+
+
   
 Commit Messages: 
 ![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
+
+Manual test plan:
+![image](https://github.com/user-attachments/assets/c2768831-8250-476d-9d0e-aba67d38486d)
+![image](https://github.com/user-attachments/assets/1597cdb0-72b8-4bc3-bf80-8b2ce22e1e4c)
+![image](https://github.com/user-attachments/assets/e3ae8453-c2ba-4c05-be26-c08e970fbf6c)
+![image](https://github.com/user-attachments/assets/6b3e3650-b530-40ba-b2d3-2f3d574de70b)
+![image](https://github.com/user-attachments/assets/97ab625a-86aa-4750-8fff-31e9be31bfd6)
 
 Finished project - screenshots 
   ![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
