@@ -1,15 +1,19 @@
 // app.test.js
-
+import $ from 'jquery';
 import { searchMovie, toggleFavorite, updateFavoriteCount } from '../assets/script';
-const $ = require('jquery');
+
 
 jest.mock('jquery', () => ({
   ajax: jest.fn(),
   default: {
     fn: {
-      click: jest.fn()
-    },
-    css: jest.fn(() => ({ display: 'block'}))
+      click: jest.fn(),
+      css: jest.fn(),
+      html: jest.fn(),
+      text: jest.fn(),
+      ready: jest.fn((callback) => callback()),
+    }
+   
   }
 }));
 
@@ -23,6 +27,7 @@ describe('Movie App', () => {
 });
 beforeEach(() => {
   jest.clearAllMocks();
+  jest.useFakeTimers();
 
 });
 
@@ -48,20 +53,24 @@ test('searchMovie function makes AJAX call and display results', () => {
   );
 
   setTimeout(() => {
+    expect($('#movie-results').html).toHaveBeenCalledWith();
     expect($('#movie-results').html()).toContain('Test Movie 1');
     expect($('#movie-results').html()).toContain('Test Movie 2')
+  
   }, 0);
+
+  jest.runAllTimers();
   });
 
   test('toggleFavorite function adds and removes from localStorage', () =>{
     const movie ={ imdbID: 'tt123', title: 'Test Movie'};
  
-    localStorage.getItem = jest.fn().mockImplementationOnce(() => '[]')
+    localStorage.getItem.mockImplementationOnce(() => '[]')
 
     toggleFavorite(movie.imdbID, movie.title);
     expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([movie]));
 
-    localStorage.getItem = jest.fn().mockImplementationOnce(() => JSON.stringify([movie]));
+    localStorage.getItem.mockImplementationOnce(() => JSON.stringify([movie]));
 
     toggleFavorite(movie.imdbID, movie.title);
     expect(localStorage.setItem).toHaveBeenCalledWith('favorites', JSON.stringify([]));
@@ -71,21 +80,27 @@ test('searchMovie function makes AJAX call and display results', () => {
 
   test('updateFavoriteCount updates the UI with the correct favorite count', () => {
     const favorites = [{ imdbID:'tt123', title: 'Test Movie'}];
-    localStorage.getItem = jest.fn().mockReturnValueOnce(JSON.stringify(favorites));
+    localStorage.getItem.mockReturnValueOnce(JSON.stringify(favorites));
   
     updateFavoriteCount();
   
   
-
+    expect($('#favorites-count').text()).toHaveBeenCalledWith();
   expect($('#favorites-count').text()).toBe('1');
+
 });
 test('Back to recommendations button works', () => {
 
 
 $('#back-to-recommendations-btn').click();
 
-expect($('#recommended-section').css(':visible')).toBe('true');
-expect($('#movie-results').css(':visible')).toBe('false');
-expect($('#back-to-recommendations-btn').css('visible')).toBe('false');
+expect($('#recommended-section').css).toHaveBeenCalledWith('display');
+expect($('#movie-results').css).toHaveBeenCalledWith('display');
+expect($('#back-to-recommendations-btn').css).toHaveBeenCalledWith('display');
+
+
+expect($('#recommended-section').css()).toBe('block');
+expect($('#movie-results').css()).toBe('none');
+expect($('#back-to-recommendations-btn').css()).toBe('none');
 
 });
