@@ -31,7 +31,7 @@ $('#back-to-recommendations-btn').click(function (){
   });
 });
 
-function loadRecommendedMovies() {
+  function loadRecommendedMovies() {
     const recommendedMovies = [
         {title: "Extraordinary You", imdbID: "tt10826102" },
         {title: "Crash Landing on you", imdbID: "tt10850932"},
@@ -111,14 +111,14 @@ $(document).ready(function() {
 updateFavoriteCount();
 
 
-function updateFavoriteCount() {
+  export function updateFavoriteCount() {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     $('#favorites-count').text(favorites.length);
 }
 
 
 
-function searchMovie(query) {
+ function searchMovie(query) {
     $.ajax({
         url:`https://www.omdbapi.com/`,
         method: 'GET',
@@ -142,7 +142,7 @@ error: function(){
     });
 };
 
-function displayMovies(movies) {
+  function displayMovies(movies) {
     $('#movie-results').empty();
     movies.forEach(movie => {
         const poster = movie.Poster!== "N/A" ? movie.Poster : './assets/images/default-image.jpg';
@@ -160,7 +160,7 @@ function displayMovies(movies) {
 
     });
 }
-function getMovieDetails(imdbID) {
+  function getMovieDetails(imdbID) {
  
    $.ajax({
     url:`https://www.omdbapi.com/`,
@@ -190,7 +190,7 @@ error: function(){
 
 }
 
-function fetchTrailer(movieTitle) {
+  function fetchTrailer(movieTitle) {
     $.ajax({
         url:`https://www.googleapis.com/youtube/v3/search`,
         method: 'GET',
@@ -225,7 +225,7 @@ function fetchTrailer(movieTitle) {
     }
 
 
-function showMovieDetails(movie) {
+  function showMovieDetails(movie) {
    
     const poster = movie.Poster !== "N/A" ? movie.Poster : './assets/images/defualt-image.jpg';
     $('#movie-details').html(`
@@ -253,7 +253,7 @@ function showMovieDetails(movie) {
     
 
 
-function toggleFavorite(imdbID, title) {
+ export function toggleFavorite(imdbID, title) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) ||[];
     const movieExists = favorites.some(movie => movie.imdbID === imdbID);
        
@@ -272,7 +272,7 @@ function toggleFavorite(imdbID, title) {
     updateFavoriteCount();
 }
 
-function isFavorite(imdbID) {
+  function isFavorite(imdbID) {
          let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
          return favorites.some(movie => movie.imdbID === imdbID);
 }

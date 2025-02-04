@@ -1,5 +1,6 @@
 // app.test.js
 
+import { searchMovie, toggleFavorite, updateFavoriteCount } from '../assets/script';
 const $ = require('jquery');
 
 jest.mock('jquery', () => ({
@@ -83,8 +84,8 @@ test('Back to recommendations button works', () => {
 
 $('#back-to-recommendations-btn').click();
 
-expect($('#recommended-section').css('display')).toBe('block');
-expect($('#movie-results').css('display')).toBe('none');
-expect($('#back-to-recommendations-btn').css('display')).toBe('none');
+expect($('#recommended-section').css(':visible')).toBe('true');
+expect($('#movie-results').css(':visible')).toBe('false');
+expect($('#back-to-recommendations-btn').css('visible')).toBe('false');
 
 });
