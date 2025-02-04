@@ -111,7 +111,7 @@ $(document).ready(function() {
 updateFavoriteCount();
 
 
-  export function updateFavoriteCount() {
+    function updateFavoriteCount() {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     $('#favorites-count').text(favorites.length);
 }
@@ -253,7 +253,7 @@ error: function(){
     
 
 
- export function toggleFavorite(imdbID, title) {
+    function toggleFavorite(imdbID, title) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) ||[];
     const movieExists = favorites.some(movie => movie.imdbID === imdbID);
        
