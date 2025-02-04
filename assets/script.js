@@ -1,36 +1,38 @@
 
-const OMDbApiKey = '2fee485b';
+const OMDbApiKey = '2fee485b'; //OMDB API key for fetching data
 
 $(document).ready(function () {
 
-    loadRecommendedMovies();
+    loadRecommendedMovies(); //Load reccomended movies on page load
 
+    // Search button click event
 $('#search-btn').click(function () {
-    const query = $('#movie-search').val().trim();
+    const query = $('#movie-search').val().trim(); //Get the search input value
     if (query !== "") {
-          searchMovie(query);
-          $('#recommended-section').hide();
-          $('#back-to-recommendations-btn').show();
+          searchMovie(query); // Call function to search for movies
+          $('#recommended-section').hide(); //Hide recommended movies section
+          $('#back-to-recommendations-btn').show(); //Show back to recommendations button
 }
 });
-
+//Back to recommendations button click event
 $('#back-to-recommendations-btn').click(function (){
-    $('#movie-results').empty();
-    $('#movie-results').empty();
-    $('#recommended-section').show();
-    $('#back-to-recommendations-btn').hide();
+    $('#movie-results').empty(); // Clear movie results
+    $('#recommended-section').show(); // show recommended section
+    $('#back-to-recommendations-btn').hide(); // Hide back to recommendations button 
 
 });
+// Show recommendations when search input is cleared 
   $('#movie-search').on('input', function () {
     if ($(this).val().trim() === ""){
    
-          $('#recommended-section').show();
-          $('#movie-results').empty();
-          $('#back-to-recommendations-btn').hide();
+          $('#recommended-section').show();  // Show reccomendations
+          $('#movie-results').empty(); // Clear search results
+          $('#back-to-recommendations-btn').hide(); // Hide buttom
     }
   });
 });
 
+// Function to load recommended movies
   function loadRecommendedMovies() {
     const recommendedMovies = [
         {title: "Extraordinary You", imdbID: "tt10826102" },
@@ -46,8 +48,9 @@ $('#back-to-recommendations-btn').click(function (){
     ];
    
     const carouselInner = $('#recommended-carousel-inner');
-    carouselInner.empty();
+    carouselInner.empty(); // Clear previous recommendations
 
+    // Loop through recommended movies and fetch data from OMDB Api
     recommendedMovies.forEach((movie, index) => {
         $.ajax({
             url:`https://www.omdbapi.com/`,
@@ -62,7 +65,7 @@ $('#back-to-recommendations-btn').click(function (){
                 let poster = data.Poster !== "N/A" ? data.Poster : './assets/images/default.jpg';
                     
 
-                    const activeClass = index === 0 ? "active" : "";
+                    const activeClass = index === 0 ? "active" : ""; // First item should be active
                     const movieItem =`
                     <div class="carousel-item ${activeClass}">
                     <img src="${poster}" class="d-block w-100" alt="${movie.title}" style="max-width: 300px; margin: auto;">
@@ -83,7 +86,7 @@ $('#back-to-recommendations-btn').click(function (){
     });
 }
 
-    
+    // Dark-mode toggle functionality
 $(document).ready(function() {
 
     if(localStorage.getItem('dark-mode')==='enabled'){
@@ -108,16 +111,16 @@ $(document).ready(function() {
 });
 });
 
-updateFavoriteCount();
+updateFavoriteCount(); //Update favourite count on page load 
 
-
+// Function to update favourite count
     function updateFavoriteCount() {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     $('#favorites-count').text(favorites.length);
 }
 
 
-
+// Function to search for movies/dramas using OMDB API
  function searchMovie(query) {
     $.ajax({
         url:`https://www.omdbapi.com/`,
@@ -142,6 +145,8 @@ error: function(){
     });
 };
 
+// Function to display  searched movies/dramas on screen
+
   function displayMovies(movies) {
     $('#movie-results').empty();
     movies.forEach(movie => {
@@ -160,6 +165,8 @@ error: function(){
 
     });
 }
+
+// Function to fetch movie details from OMDB API
   function getMovieDetails(imdbID) {
  
    $.ajax({
@@ -189,7 +196,7 @@ error: function(){
     });
 
 }
-
+// Function to fetch movie trailers from Youtube API
   function fetchTrailer(movieTitle) {
     $.ajax({
         url:`https://www.googleapis.com/youtube/v3/search`,
@@ -224,7 +231,7 @@ error: function(){
         });
     }
 
-
+// Function to show movie details when ypu press view details
   function showMovieDetails(movie) {
    
     const poster = movie.Poster !== "N/A" ? movie.Poster : './assets/images/defualt-image.jpg';
@@ -251,7 +258,7 @@ error: function(){
         $('#movie-details').empty();
     }
     
-
+// Function to check if a movie/drama is in favourites
 
     function toggleFavorite(imdbID, title) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) ||[];
@@ -260,12 +267,12 @@ error: function(){
     if(movieExists) {
         favorites = favorites.filter(movie => movie.imdbID !== imdbID);
         Swal.fire('Removed!',`${title} has been removed from your favorites.`,'info');
-       
+       // When you remove from favourites - a pop up should display on the bottom of the screen.
     }else {
         
         favorites.push({imdbID, title});
         Swal.fire('Added!',`${title} has been added to your favorites.`, 'success');
-       
+       // When you add to favourites - a pop should display at the bottom of the screen.
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
