@@ -22,11 +22,12 @@ $('#back-to-recommendations-btn').click(function (){
 
 });
 // Show recommendations when search input is cleared 
-  $('#movie-search').on('input', function () {
-    if ($(this).val().trim() === ""){
-   
-          $('#recommended-section').show();  // Show reccomendations
-          $('#movie-results').empty(); // Clear search results
+  $('#movie-search').keypress(function(e) {
+     if(e.which === 13) {
+        const query = $('#movie-search').val().trim();
+        if (query !== "")
+            searchMovie(query);
+          $('#recommended-section').hide();  // Show reccomendations
           $('#back-to-recommendations-btn').hide(); // Hide buttom
     }
   });
@@ -263,20 +264,23 @@ error: function(){
     function toggleFavorite(imdbID, title) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) ||[];
     const movieExists = favorites.some(movie => movie.imdbID === imdbID);
-       
+    const favoriteButton = $('#movie-details button'); // get the favourite button
     if(movieExists) {
         favorites = favorites.filter(movie => movie.imdbID !== imdbID);
         Swal.fire('Removed!',`${title} has been removed from your favorites.`,'info');
-       // When you remove from favourites - a pop up should display on the bottom of the screen.
+       favoriteButton.text('Add to Favorites'); // change button text to add to favourites
+        // When you remove from favourites - a pop up should display on the bottom of the screen.
     }else {
         
         favorites.push({imdbID, title});
         Swal.fire('Added!',`${title} has been added to your favorites.`, 'success');
-       // When you add to favourites - a pop should display at the bottom of the screen.
+        favoriteButton.text('Remove from Favorites'); // change button text to remove from favourites
+        // When you add to favourites - a pop should display at the bottom of the screen.
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
     updateFavoriteCount();
+   
 }
 
   function isFavorite(imdbID) {
