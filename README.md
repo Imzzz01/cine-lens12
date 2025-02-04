@@ -23,22 +23,17 @@ Features and functionalities:
   • Movie trailer 
   • Gallary of Images
 
-• User Favorites and Wish List: 
-  • Add movies to favorites and track what movies the user likes.
+• User Favorites: 
+  • Add movies to favorites.
   • Remove from favorites functionality 
   • Movies are stored in in browsers localStorage for persistence.
  
-• User Accounts : 
-  • Users can signup, login and maintain a personalised account.
-  • Once Logged in, users can:
-  • Save Favorite movies to their profile
-  • Access a personal Watchlist to keep track of movies they want to watch in the future.
-
 • Movie trailers and external links:
   • Watch trailers directly within the app.
-  • Provide external links to buy or download the movie from third party services like Netflix, Amazon, etc.
-  
-• Corousel for featured movies: 
+ 
+  Personalised Movie Recommendation:
+  • Implement a recommendation section.
+  • Corousel for movie recommendations. 
   • Dynamic corousel showing featured, trending or top-rated movies
   • The corousel can be clicked to navigate to movie details directly.
 
@@ -54,11 +49,7 @@ Technologies Used :
   • CSS3 : For styling and making the website responsive
   • Javascript (jQuery) : for interactivity and DOM manipulation 
   • Bootsrap : For a responsive and sleek design
-  • AOS : (Animate on scroll) : For smooth scrolling animations.
-  • swiper : For creating the movie carousel.
-  • noUiSlider : For interactive movie filters( rating, release year, etc)
-  • Lottie.js : For animations and loading visuals.
-
+ 
 • API's 
   • Trakt Tv API : For movie data, including movie titles, images, ratings, and other details. 
   • SweetAlert : For displaying notifications when adding or removing movies from favourites.
@@ -67,23 +58,28 @@ Technologies Used :
   • LocalStorage is used for storing user favorites, ensuring data persistence even after page refresh.
 
 Future Enhancements: 
+User Accounts: 
+  • Users can signup, login and maintain a personalised account.
+  • Once Logged in, users can:
+  • Save Favorite movies to their profile
+  • Access a personal Watchlist to keep track of movies they want to watch in the future.
 
 User Authentication 
   • Implement user Login, sign-up authentication using firebase and another backend service.
+
 Movie rating System: 
   • Allow users to rate movies display average ratings
-Personalised Movie Recommendation:
-  • Implement a recommendation sytem based on user preferences, watch history, of similar genres.
+
 Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
 Integration and external API's
 
 Internal or external reference:
-- Reponsiveness - https://getbootstrap.com/
-- used jquery for my project - https://jquery.com/
-- cdn used https://www.bing.com/search?q=sweetalert2%20cdn&qs=n&form=QBRE&sp=-1&lq=0&pq=&sc=0-0&sk=&cvid=0C55985B3F3B49ADB5289391744D575C&ghsh=0&ghacc=0&ghpl=
-- icons used from - https://fontawesome.com/
-- Api used - https://www.omdbapi.com/
+1. I have used grid system from bootstrap, to ensure that my APP is responsive on all devices such as Laptops, PC, Mobile etc (Responsiveness) https://getbootstrap.com/
+2. I have used jquery for my project as it makes it easy to use javascript for my website - https://jquery.com/
+3. I have cdn used sweet alert 2 cdn to display notification when a movie is added to favourites and also removed. -  https://www.bing.com/search?q=sweetalert2%20cdn&qs=n&form=QBRE&sp=-1&lq=0&pq=&sc=0-0&sk=&cvid=0C55985B3F3B49ADB5289391744D575C&ghsh=0&ghacc=0&ghpl=
+4. I have used icons from fontawesome such as previous and next for my carousel slides.- https://fontawesome.com/
+5. I have used an omdb api to handle my app, where it fetches data, like movies, posters, etc - https://www.omdbapi.com/
 
 HTML and CSS validation 
 ![image](https://github.com/user-attachments/assets/256e24ce-b445-4d1d-a39c-eab55aac19a8)
