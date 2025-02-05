@@ -18,7 +18,7 @@
 <body>
     
     <div id="favorites-container" class="d-flex justify-content-end">
-        <button id="button" class="btn btn-outline-danger">
+        <button id="button" class="btn btn-outline-danger" aria-label="View your favourite movies">
             <i class="fas fa-heart"></i>
             <span id="favorites-count" class="badge bg-danger">0</span>
         </button>
@@ -29,11 +29,11 @@
        
     <div class="row mb-4">
         <div class="col-md-8 col-12">
-            <input type="text" id="movie-search" class="form-control" placeholder="Search for a drama/movie">
-          <ul id="suggestions"></ul>
+            <input type="text" id="movie-search" class="form-control" placeholder="Search for a drama/movie" aria-label="Search for movies">
+          <ul id="suggestions" aria-live="polite"></ul>
         </div>
         <div class="col-md-4 col-12">
-            <button id="search-btn" class="btn btn-primary w-100">Search</button>
+            <button id="search-btn" class="btn btn-primary w-100" aria-label="Search Movies/Dramas">Search</button>
         </div>
     </div>
     
@@ -44,18 +44,18 @@
 <div id="movie-details" class="mt-4 text-center"></div>
 
 <section id="recommended-section" class="mt-5">
-    <h2 class="text-center mb-4">Recommended Movies</h2>
+    <h2 class="text-center mb-4">Recommended Dramas/Movies</h2>
     <div id="recommended-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner" id="recommended-carousel-inner">
 
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#recommended-carousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#recommended-carousel" data-bs-slide="prev" aria-label="Previous slide">
 
 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 <span class="visually-hidden">Previous</span>
 </button>
-<button class="carousel-control-next" type="button" data-bs-target="#recommended-carousel" data-bs-slide="next">
+<button class="carousel-control-next" type="button" data-bs-target="#recommended-carousel" data-bs-slide="next" aria-label="Next slide">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
 </button>
@@ -64,8 +64,8 @@
 
 </section>
 <div class="text-center mt-3">
-<button id="dark-mode-toggle" class="btn btn-dark m-3">Dark Mode</button>
-<button id="back-to-recommendations-btn" class="btn btn-outline-secondary m-3" style="display: none;">Back to Recommendations</button>
+<button id="dark-mode-toggle" class="btn btn-dark m-3" aria-label="Toggle dark mode">Dark Mode</button>
+<button id="back-to-recommendations-btn" class="btn btn-outline-secondary m-3" style="display: none;" aria-label="Back to recommendations">Back to Recommendations</button>
 </div>
 </div>
 
