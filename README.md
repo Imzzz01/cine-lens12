@@ -3,6 +3,8 @@
 Purpose of project 
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
+CineLens is not just a movie database; it is an interactive platform that empowers users to engage with their favourite films and shows in dynamic ways. Whether you're looking for recommendations based on your viewing habits, tracking how many movies you have added and removed from favourites, or simply enjoying trailers and detailed movie information, cinelens enhances every step of your cinematic journey.
+
 Features and functionalities:
 • Movie search and Discovery:
   • Users can search for movies by title 
@@ -72,6 +74,9 @@ Movie rating System:
 
 Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
+
+CineLens is designed to make movie exploration easier, more enjoyable and customised to your preferences. This platform is built to enhance your movie-watching experience.
+
 Integration and external API's
 
 Internal or external reference:
