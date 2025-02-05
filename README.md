@@ -81,6 +81,12 @@ Internal or external reference:
 4. I have used icons from fontawesome such as previous and next for my carousel slides.- https://fontawesome.com/
 5. I have used an omdb api to handle my app, where it fetches data, like movies, posters, etc - https://www.omdbapi.com/
 
+UX Design Wireframe (Draw.IO)
+![image](https://github.com/user-attachments/assets/e5c084ee-8be1-492a-b8df-4fce41b73fa8)
+![image](https://github.com/user-attachments/assets/053ac37f-d3aa-44f9-8731-904800b5e2b1)
+![image](https://github.com/user-attachments/assets/0480a04e-4128-4395-a580-531978476861)
+
+
 HTML and CSS validation 
 ![image](https://github.com/user-attachments/assets/256e24ce-b445-4d1d-a39c-eab55aac19a8)
 ![image](https://github.com/user-attachments/assets/f177ca2b-258a-4250-bd11-0d216f30899f)
