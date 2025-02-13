@@ -12,7 +12,9 @@ $('#search-btn').click(function () {
           searchMovie(query); // Call function to search for movies
           $('#recommended-section').hide(); //Hide recommended movies section
           $('#back-to-recommendations-btn').show(); //Show back to recommendations button
-}
+         $("#movie-details").hide(); //Hide movie details
+        $('#movie-results').show(); //Show movie results
+        }
 });
 //Back to recommendations button click event
 $('#back-to-recommendations-btn').click(function (){
@@ -29,6 +31,7 @@ $('#back-to-recommendations-btn').click(function (){
             searchMovie(query);
           $('#recommended-section').hide();  // Show reccomendations
           $('#back-to-recommendations-btn').hide(); // Hide buttom
+
     }
   });
 });
