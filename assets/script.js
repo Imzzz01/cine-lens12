@@ -245,13 +245,18 @@ error: function(){
         <p><strong>Genre:</strong>${movie.Genre}</p>
         <p><strong>Rating:</strong>${movie.imdbRating}</p>
         <p><strong>Plot:</strong>${movie.Plot}</p>
-        <button class="btn btn-outline-secondary" onclick="toggleFavorite('${movie.imdbID}', '${movie.Title.replace(/'/g, "\\'")}')">
+        <button id="favorite-button" class="btn btn-outline-secondary">
         ${isFavorite(movie.imdbID) ? 'Remove from Favorites': 'Add to Favorites'} </button>
    <br><br>
         <button class="btn btn-primary" onclick="backToMovies()">Back to Movies</button>     
         </div>
 
     `);
+
+    $('#favorite-button').click(function() {
+        toggleFavorite(movie.imdbID, movie.Title);
+    });
+        
         $('#movie-results').hide();
         $('#movie-details').show();
        
@@ -267,23 +272,31 @@ error: function(){
     function toggleFavorite(imdbID, title) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) ||[];
     const movieExists = favorites.some(movie => movie.imdbID === imdbID);
-    const favoriteButton = $('#movie-details button'); // get the favourite button
+
     if(movieExists) {
         favorites = favorites.filter(movie => movie.imdbID !== imdbID);
         Swal.fire('Removed!',`${title} has been removed from your favorites.`,'info');
-       favoriteButton.text('Add to Favorites'); // change button text to add to favourites
         // When you remove from favourites - a pop up should display on the bottom of the screen.
     }else {
         
         favorites.push({imdbID, title});
         Swal.fire('Added!',`${title} has been added to your favorites.`, 'success');
-        favoriteButton.text('Remove from Favorites'); // change button text to remove from favourites
-        // When you add to favourites - a pop should display at the bottom of the screen.
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
     updateFavoriteCount();
+    updateFavoriteButton(imdbID);
    
+}
+
+function updateFavoriteButton(imdbID) {
+    const favoriteButton = $('#favorite-button');
+    if(isFavorite(imdbID)) {
+        button.text('Remove from Favorites');
+    } else {
+        button.text('Add to Favorites');
+       
+    }
 }
 
   function isFavorite(imdbID) {
