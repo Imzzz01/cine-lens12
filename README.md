@@ -1,5 +1,7 @@
 Links for screenshots
 1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
+2. Html Validator: https://validator.w3.org/nu/#textarea
+3. CSS  Validator: https://jigsaw.w3.org/css-validator/validator
 
 
 #README: CineLens(http://localhost:5501/) [CineLens]
