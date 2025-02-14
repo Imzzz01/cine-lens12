@@ -1,37 +1,39 @@
 
-const OMDbApiKey = '2fee485b'; //OMDB API key for fetching data
+const OMDbApiKey = "2fee485b"; //OMDB API key for fetching data
 
 $(document).ready(function () {
 
     loadRecommendedMovies(); //Load reccomended movies on page load
 
     // Search button click event
-$('#search-btn').click(function () {
-    const query = $('#movie-search').val().trim(); //Get the search input value
+$("#search-btn").click(function () {
+    const query = $("#movie-search").val().trim(); //Get the search input value
     if (query !== "") {
           searchMovie(query); // Call function to search for movies
-          $('#recommended-section').hide(); //Hide recommended movies section
-          $('#back-to-recommendations-btn').show(); //Show back to recommendations button
+          $("#recommended-section").hide(); //Hide recommended movies section
+          $("#back-to-recommendations-btn").show();
+        //Show back to recommendations button
          $("#movie-details").hide(); //Hide movie details
         $('#movie-results').show(); //Show movie results
-        }
+}
 });
 //Back to recommendations button click event
-$('#back-to-recommendations-btn').click(function (){
-    $('#movie-results').empty(); // Clear movie results
-    $('#recommended-section').show(); // show recommended section
-    $('#back-to-recommendations-btn').hide(); // Hide back to recommendations button 
+$("#back-to-recommendations-btn").click(function (){
+    $("#movie-results").empty(); // Clear movie results
+    $("#recommended-section").show(); // show recommended section
+    $("#back-to-recommendations-btn").hide();
+    // Hide back to recommendations button
 
 });
-// Show recommendations when search input is cleared 
-  $('#movie-search').keypress(function(e) {
+// Show recommendations when search input is cleared
+  $("#movie-search").keypress(function(e) {
      if(e.which === 13) {
-        const query = $('#movie-search').val().trim();
-        if (query !== "")
+        const query = $("#movie-search").val().trim();
+        if (query !== "") {
             searchMovie(query);
-          $('#recommended-section').hide();  // Show reccomendations
-          $('#back-to-recommendations-btn').hide(); // Hide buttom
-
+        }
+          $("#recommended-section").hide();  // Show reccomendations
+          $("#back-to-recommendations-btn").hide(); // Hide buttom
     }
   });
 });
@@ -39,17 +41,18 @@ $('#back-to-recommendations-btn').click(function (){
 // Function to load recommended movies
   function loadRecommendedMovies() {
     const recommendedMovies = [
-        {title: "Extraordinary You", imdbID: "tt10826102" },
-        {title: "Crash Landing on you", imdbID: "tt10850932"},
-        {title: "Destined With You", imdbID: "tt27974068"},
-        {title: "All Of Us Are Dead", imdbID: "tt14169960"},
-        {title: "Love Next Door", imdbID: "tt30446769"},
-        {title: "Alchemy of souls", imdbID: "tt20859920"},
-        {title: "Tomorrow", imdbID: "tt18926162"},
-        {title: "Sweet Home", imdbID: "tt11612120"},
-        
-    
+        {imdbID: "tt10826102", title: "Extraordinary You"},
+        {imdbID: "tt10850932", title: "Crash Landing on you"},
+        {imdbID: "tt27974068", title: "Destined With You"},
+        {imdbID: "tt14169960", title: "All Of Us Are Dead"},
+        {imdbID: "tt30446769", title: "Love Next Door"},
+        {imdbID: "tt20859920", title: "Alchemy of souls"},
+        {imdbID: "tt18926162", title: "Tomorrow"},
+        {imdbID: "tt11612120", title: "Sweet Home"}
+
+
     ];
+
    
     const carouselInner = $('#recommended-carousel-inner');
     carouselInner.empty(); // Clear previous recommendations
@@ -90,30 +93,32 @@ $('#back-to-recommendations-btn').click(function (){
     });
 }
 
+
     // Dark-mode toggle functionality
-$(document).ready(function() {
+    $(document).ready(function() {
 
-    if(localStorage.getItem('dark-mode')==='enabled'){
-        $('body').addClass('dark-mode');
-        $('#dark-mode-toggle').text('Light Mode');
-
-    } else {
-        $('#dark-mode-toggle').text('dark-mode');
-    } 
-
-    $('#dark-mode-toggle').click(function() {
-    $('body').toggleClass('dark-mode');
-
-    if ($('body').hasClass('dark-mode')) {
-        $('#dark-mode-toggle').text('Light Mode');
-        localStorage.setItem('dark-mode','enabled');
-
-    } else {
-        $('#dark-mode-toggle').text('dark-mode');
-        localStorage.removeItem('dark-mode');
-    }
-});
-});
+        if(localStorage.getItem("dark-mode")==="enabled"){
+            $("body").addClass("dark-mode");
+            $("#dark-mode-toggle").text("Light Mode");
+    
+        } else {
+            $("#dark-mode-toggle").text("dark-mode");
+        } 
+    
+        $("#dark-mode-toggle").click(function() {
+        $("body").toggleClass("dark-mode");
+    
+        if ($("body").hasClass("dark-mode")) {
+            $("#dark-mode-toggle").text("Light Mode");
+            localStorage.setItem("dark-mode","enabled");
+    
+        } else {
+            $("#dark-mode-toggle").text("dark-mode");
+            localStorage.removeItem("dark-mode");
+        }
+    });
+    });
+    
 
 updateFavoriteCount(); //Update favourite count on page load 
 
@@ -158,7 +163,7 @@ error: function(){
 
         const movieCard = `
         <div class="col-md-3 col-sm-6 col-12 movie-card" data-aos="zoom-in">
-        <img src="${poster}" alt="${movie.Title}">
+        <img src="${poster}" alt="${movie.Title}" class="clickable-poster" data-imdbID="${movie.imdbID}" style="cursor: pointer;">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
         <button class="btn btn-outline-primary w-100" onclick="getMovieDetails('${movie.imdbID}')">View Details</button>
@@ -167,6 +172,11 @@ error: function(){
 
         $('#movie-results').append(movieCard);
 
+    });
+
+    $('.clickable-poster').click(function() {
+        const imdbID = $(this).data('imdbid');
+        getMovieDetails(imdbID);
     });
 }
 
