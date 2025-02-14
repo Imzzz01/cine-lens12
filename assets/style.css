@@ -156,6 +156,13 @@ body.dark-mode#movie-search {
     width: 100px;/*Makes sure the image takes full width of the container*/
 }
 
+footer {
+    color: #333; /*Dark text color*/
+    border-top: 1px solid #000000; /*Adds a border at the top*/
+    height: 50px; /*Fixed height for the footer*/
+
+}
+
 @media screen and (max-width: 768px){
     .movie-card{
         max-width: 100%; /*Allow the card to take full width*/
