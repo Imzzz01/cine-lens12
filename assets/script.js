@@ -82,13 +82,13 @@ $("#back-to-recommendations-btn").click(function (){
                     <div class="carousel-item ${activeClass}">
                     <img
                     src="${poster}"
-                    class="d-block w-100"
+                    class="d-block"
                     alt="${movie.title}
-                    style="max-width: 300px; margin: auto;">
+                    style="width: 200px; height: 300px; object-fit: cover:">
                      <div class="carousel-caption d-none d-md-block">
                    <h5>${movie.title}</h5>
                    <button
-                   class="btn btn-outline-light"
+                   class="btn btn-outline-dark"
                 onclick="getMovieDetails('${movie.imdbID}')
                    ">View Details</button>
 
@@ -182,10 +182,7 @@ $("#movie-results").html("<p>Error fetching data. Please try again later.</p>");
        style="cursor: pointer;">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
-     <button
-     class="btn btn-outline-primary
-     w-100" onclick="getMovieDetails('${movie.imdbID}')">
-    View Details</button>
+    
         </div>
         `;
 
@@ -244,7 +241,7 @@ $("#movie-details").append
             if (videoId) {
                 const trailerEmbed = `
                 <h4>Watch the Trailer:</h4>
-           <iframe width="560"
+           <iframe width="480"
            height="315"
            src="https://www.youtube.com/embed/${videoId}"
          frameborder="0" allow="accelerometer;
