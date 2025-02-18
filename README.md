@@ -1,8 +1,5 @@
 Links for screenshots
 1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
-2. Html Validator: https://validator.w3.org/nu/#textarea
-3. CSS  Validator: https://jigsaw.w3.org/css-validator/validator
-
 
 #README: CineLens(http://localhost:5501/) [CineLens]
 
@@ -13,18 +10,26 @@ CineLens is not just a movie database; it is an interactive platform that empowe
 
 Features and functionalities:
 • Movie search and Discovery:
+
   • Users can search for movies by title 
+  
   • Movie suggestions and autocomplete feature for search bar.
+  
   • Display movie details including title, year of release, genres, rating, plot, etc.
 
 • User Interaction and Engangement:
+
   • light and Dark mode toggle for better user experience 
+  
   • Interactive movie cards with hover animations.
+  
   • Movie posters, Descriptions, and ratings for each search result.
 
 • Detailed Movie Information:
   • Click on any movie to view more detailed information such as:
+  
   • Genre
+  
   • Release year 
   • Plot summary 
   • Cast and crew details 
@@ -94,51 +99,99 @@ Internal or external reference:
 
 UX Design Wireframe (Draw.IO)
 ![image](https://github.com/user-attachments/assets/e5c084ee-8be1-492a-b8df-4fce41b73fa8)
+
 ![image](https://github.com/user-attachments/assets/053ac37f-d3aa-44f9-8731-904800b5e2b1)
+
 ![image](https://github.com/user-attachments/assets/0480a04e-4128-4395-a580-531978476861)
 
 
 HTML and CSS validation 
 ![image](https://github.com/user-attachments/assets/256e24ce-b445-4d1d-a39c-eab55aac19a8)
+
 ![image](https://github.com/user-attachments/assets/f177ca2b-258a-4250-bd11-0d216f30899f)
 
 
   
 Commit Messages: 
 ![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
+
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
+Mnaual testing and Automated testing
+
+Manual testing: This type of test uses an application's functions and features. It is done by writing down test cases. This test can be quite helpful; however, we tend to make mistakes and are bound to create errors. Also, it could be time-consuming. Different types of manual testing exist, such as white box testing, black box testing, and grey box testing. Each test has its purpose in detecting bugs and how to get rid of those bugs from the application.
+
+Key principles of manual testing:
+- Test execution by humans: This is a test performed by humans, for example, creating a test plan with a description of the test, expected outcome, errors, screenshots, and testing whether each test of a function or feature has passed or failed.
+
+- Test cases and documentation:  This ensures that all test cases meet the documentation's requirements.
+Exploratory testing: Tests can sometimes be tested through exploratory testing, which helps detect application defects. We are exploring the application, and in many cases, some errors and bugs may not have made it into the test cases.
+
+- Flexibility: This type of test allows changes after finding new errors or bugs within the application or through user feedback.
+Types of manual testing:
+
+- White box testing: This type of test is based on knowledge and logic; you would need a basic understanding of the code.
+  
+- Black box testing:  This is used to test the software's functionality.
+  
+- Grey box testing: Uses both white box and black box testing.
+
+Advantages of manual testing:
+
+- Fast and gives accurate visual feedback
+- It is efficient if you want to make changes to test cases.
+- Flexibility
+Disadvantages:
+
+- Less reliable
+- Time-consuming
+- You need experience.
+- Expensive
+  
+Automated testing: This involves using automation tools to execute the test cases. In this test, special software is used to check and test a software product instead of manually testing the application.
+
+Key principles of automated testing:
+
+- Test execution by tools: Tests used: selenium, JUnit or TestNg.
+  
+- Repeatability:  Automates tasks which are helpful for testers.
+  
+- Speed and efficiency: Automated tests can be executed faster than manual testing.
+  
+- Consistent and reliable: Automated tests are consistent, with no human errors.
+  
+When to use automated testing:
+
+- Performance Testing: This tests how the app handles large user volumes.
+
+- Large-scale projects: When the project has many features and frequent updates.
+
 
 Manual test plan:
 ![image](https://github.com/user-attachments/assets/c2768831-8250-476d-9d0e-aba67d38486d)
+
 ![image](https://github.com/user-attachments/assets/1597cdb0-72b8-4bc3-bf80-8b2ce22e1e4c)
+
 ![image](https://github.com/user-attachments/assets/e3ae8453-c2ba-4c05-be26-c08e970fbf6c)
+
 ![image](https://github.com/user-attachments/assets/6b3e3650-b530-40ba-b2d3-2f3d574de70b)
+
 ![image](https://github.com/user-attachments/assets/97ab625a-86aa-4750-8fff-31e9be31bfd6)
 
-| Test Area    | Test case ID              | Test description                                    | Steps                                                                                                                                                                                         | Expected result | Pass/fail |  |
-| ------------------------ | ------------ | ------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |  |
-| Functional Testing						                         |                          |                                                    |                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                            |                    |  |
-| Search                                           | 1.1                      | Search for a valid movie                           | 1. Enter a movie title. 2. Click search                                                                | Movie details should be displayed                                                                                                                                                                                                                                                                                                                                                          | Pass               |  |
-|                                                  | 1.3                      | Search with empty input                            | 1. Click ‘search’ without entering text.                                                               | Nothing will appear!                                                                                                                                                                                                                                                                                                                                                                       | Pass               |  |
-| Usability testing                                |                          |                                                    |                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                            |                    |  |
-|                                                  | 2.1                      | View recommended Dramas.                           | 1. Open the app. 2. scroll to ‘recommended dramas’                                                     | Movies or dramas should be displayed in a carousel.	2.1	View recommended Dramas.	1. Open the app. 2. scroll to ‘recommended dramas’	Movies or dramas should be displayed in a carousel.	 Pass                                                                                                                                                                                              | Pass               |  |
-|                                                  | 2.2                      | Navigate through carousel                          | 1. Click next/previous buttons                                                                         | Movies or dramas should change accordingly	2.2	Navigate through carousel	1. Click next/previous buttons	Movies or dramas should change accordingly	 Pass                                                                                                                                                                                                                                   | Pass               |  |
-|                                                  | 2.3                      | Add/Remove favourites                              | 1. Add/ remove movies and dramas from favourites.                                                      | Favourites should update correctly                                                                                                                                                                                                                                                                                                                                                         | Pass               |  |
-|                                                  | 2.4                      | Favourite count                                    | 1. Add and remove movies and dramas from favourites                                                    | The count will update when a movie is added or removed                                                                                                                                                                                                                                                                                                                                     | Pass               |  |
-| Responsive Testing                               |                          |                                                    |                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                            |                    |  |
-|                                                  | 3.1                      | UI layout on desktop                               | 1. Open the app on a desktop browser                                                                   | Layout should be structured properly.                                                                                                                                                                                                                                                                                                                                                      | Pass               |  |
-|                                                  | 3.2                      | UI layout on mobile                                | 1. Open the app on a mobile device.                                                                    | Layout should adjust properly                                                                                                                                                                                                                                                                                                                                                              | Pass               |  |
-|                                                  | 3.3                      | UI layout in dark mode                             | 1. Enable dark mode. 2. Check different sections                                                       | The colour scheme should be consistent                                                                                                                                                                                                                                                                                                                                                     | Pass               |  |
-|                                                  |                          |                                                    |                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                            |                    |  |
-|                                                  |                          |                                                    |                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                            |                    |  |
+
 
 Finished project - screenshots 
-  ![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
+![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
+
 ![cine2](https://github.com/user-attachments/assets/b087e4d0-60b1-4e6d-bbb5-dbb9d0c9d18f)
+
 ![cine3](https://github.com/user-attachments/assets/552d32b0-a760-460d-a440-e1612d50a22e)
+
 ![cine4](https://github.com/user-attachments/assets/451ef73a-7918-4b00-b5d5-58d8fc6886dc)
+
 ![cine5](https://github.com/user-attachments/assets/0aac2b04-e034-486c-81f9-31e464e87e06)
+
 ![cine6](https://github.com/user-attachments/assets/e75c7280-5a16-4440-8d44-12ba2451d375)
+
 ![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
 
 Deployment 
