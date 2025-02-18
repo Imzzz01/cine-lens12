@@ -132,13 +132,12 @@ fetchAndPopulateMovies();
                     <div class="carousel-item ${activeClass}">
                     <img
                     src="${poster}"
-                    class="d-block"
                     alt="${movie.title}
-                    style="width: 200px; height: 300px; object-fit: cover:">
+                    class="d-block">
                      <div class="carousel-caption d-none d-md-block">
                    <h5>${movie.title}</h5>
                    <button
-                   class="btn btn-outline-dark"
+                   class="btn btn-outline-light"
                 onclick="getMovieDetails('${movie.imdbID}')
                    ">View Details</button>
 
