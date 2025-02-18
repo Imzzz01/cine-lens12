@@ -66,7 +66,27 @@ $("#back-to-recommendations-btn").click(function (){
 });
 
 }
-fetchAndPopulateMovies();//populate movies on page load
+
+
+function handleFormSubmission(event) {
+    const selectedMovie = $("#movie-select").val();
+    const selectedDate = $("#date").val();
+    const selectedTime = $("#time").val();
+    const numberOfTickets = $("#tickets").val();
+
+    if(!selectedMovie || !selectedDate || !selectedTime || !numberOfTickets) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    alert(`booking confirmed!\nMovie: ${selectedMovie}\nDate: ${selectedDate}\nTime: ${selectedTime}\nTickets: ${numberOfTickets}`);
+    console.log("Form Data: ", { selectedMovie, selectedDate, selectedTime, numberOfTickets});
+
+    $("ticket-form")[0].reset();
+}
+$("#ticket-form").on("submit", handleFormSubmission);
+
+fetchAndPopulateMovies();
 });
 // Function to load recommended movies
   function loadRecommendedMovies() {
