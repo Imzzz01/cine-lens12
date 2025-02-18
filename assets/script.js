@@ -36,8 +36,38 @@ $("#back-to-recommendations-btn").click(function (){
           $("#back-to-recommendations-btn").hide(); // Hide buttom
     }
   });
+
+    const query = "movies"; // Search query for drama movies
+     const type = "movie"; // Type of search
+     const page = 1;
+    
+     function fetchAndPopulateMovies(){
+     $.ajax({
+            url: `https://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${OMDbApiKey}`,
+            method: "GET",
+            success: function(data) {
+                if (data.Response === "True") {
+                    const movies = data.Search;
+                    const movieSelect = $("#movie-select");
+                    movieSelect.empty(); // Clear previous movies
+                    movieSelect.append("<option value=''>Select a movie</option>");
+                    
+                    movies.forEach(function(movie) {
+                    movieSelect.append(`<option value="${movie.imdbID}">${movie.Title}</option>`);         
+        });
+
+    } else {
+        console.error("No movies found.");
+    }
+},
+   error: function(){
+    console.error("Error fetching movies from omdb.");
+   }
 });
 
+}
+fetchAndPopulateMovies();//populate movies on page load
+});
 // Function to load recommended movies
   function loadRecommendedMovies() {
     const recommendedMovies = [
