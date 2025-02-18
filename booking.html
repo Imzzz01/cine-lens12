@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<button id="ticket-booking-btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ticketModal">
+    Book Tickets
+</button>
+
+<div class="modal-fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ticketModalLabel">Book Tickets</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <form id="ticket-form">
+                    <div class="mb-3">
+                        <label for="movie-select" class="form-label">Select Movie</label>
+                    <select class="form-select" id="movie-select" required>
+                        <option value="">Choose a movie</option>
+
+                    </select>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for ="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for ="time" class="form-label">Time</label>
+                    <input type="time" class="form-control" id="time" required>
+                    </div>
+                    
+                <div class="mb-3">
+                        <label for ="tickets" class="form-label">Number of Tickets</label>
+                        <input type="number" class="form-control" id="number" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Proceed to Payment </button>     
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
