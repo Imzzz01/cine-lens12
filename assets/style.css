@@ -6,9 +6,21 @@
 
 body {
     font-family: Arial, sans-serif; /*Set a clean, sans- serif font */
-background-color: #f0f0f0;/* Set background color for my page*/
-
+    background: linear-gradient(135deg, #f5f5f5 #c3cfc3); /*Adds a subtle gradient background */
 }
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*Adds a soft shadow to the navbar */
+}
+
+.movie-card:hover {
+    transform: translateY(-10px); /*Adds a hover effect to the movie cards */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /*Adds a hover effect to the movie cards */
+}
+.btn {
+    transition: all 0.3s ease; /*Add transition to all buttons */
+}
+
 
 span {
     color: #0056b3; /* Set span color to blue*/
