@@ -26,7 +26,11 @@ span {
     color: #0056b3; /* Set span color to blue*/
 }
 
-
+#favorites-count{
+    margin-left: 5px; /*adds space to the left of the count*/
+    font-size: 0.9em; /* smaller font size for the count*/
+    color: #fff; /* white text color*/
+}
 
 
 h1 {

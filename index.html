@@ -27,7 +27,7 @@
 
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
                 </li>
@@ -39,21 +39,33 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="booking.html" class="btn btn-success">Book Tickets</a>
-                </li>
-                
-                
+                </li>   
             </ul>
+            <div class="d-flex align-items-center">
+
+    <!--Dark mode toggle and back to recommendations button-->
+<button id="dark-mode-toggle" class="btn btn-outline-light m-2" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i> <!--Moon icon for dark mode--> 
+</button>
+
+<button id="favorites-button" class="btn btn-outline-danger" aria-label="View your favourite movies">
+            <i class="fas fa-heart"></i>
+            <span id="favorites-count">0</span>
+        </button>
+    </div>
         </div>
         </div>
     </nav>
     <!--Favourites button container-->
     <div id="favorites-container" class="d-flex justify-content-end">
-        <button id="button" class="btn btn-outline-danger" aria-label="View your favourite movies">
-            <i class="fas fa-heart"></i>
-            <span id="favorites-count" class="badge bg-danger">0</span>
-        </button>
-    </div>
+        
    
+    
+
+
+<button id="back-to-recommendations-btn" class="btn btn-outline-secondary m-3" style="display: none;" aria-label="Back to recommendations">Back to Recommendations</button>
+</div>
+
     <div class="container mt-5">
         <!--Main heading -->
         <h1 class="text-center">Cine<span>Lens</span></h1>
@@ -98,11 +110,7 @@
 
 </section>
 
-<div class="text-center mt-3">
-    <!--Dark mode toggle and back to recommendations button-->
-<button id="dark-mode-toggle" class="btn btn-dark m-3" aria-label="Toggle dark mode">Dark Mode</button>
-<button id="back-to-recommendations-btn" class="btn btn-outline-secondary m-3" style="display: none;" aria-label="Back to recommendations">Back to Recommendations</button>
-</div>
+
 </div>
 <footer class="text-center py-3 bg-light mt-5">
 <div class="container">

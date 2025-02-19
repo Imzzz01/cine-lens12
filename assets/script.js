@@ -158,19 +158,19 @@ fetchAndPopulateMovies();
 
         if(localStorage.getItem("dark-mode")==="enabled"){
             $("body").addClass("dark-mode");
-            $("#dark-mode-toggle").text("Light Mode");
+            $("#dark-mode-toggle i").removeClass("fa-moon").addClass("fa-sun");
         } else {
-            $("#dark-mode-toggle").text("dark-mode");
+            $("#dark-mode-toggle i").removeClass("fa-sun").addClass("fa-moon");
         }
         $("#dark-mode-toggle").click(function() {
         $("body").toggleClass("dark-mode");
 
         if ($("body").hasClass("dark-mode")) {
-            $("#dark-mode-toggle").text("Light Mode");
+            $("#dark-mode-toggle i").removeClass("fa-moon").addClass("fa-sun");
             localStorage.setItem("dark-mode","enabled");
 
         } else {
-            $("#dark-mode-toggle").text("dark-mode");
+            $("#dark-mode-toggle i").removeClass("fa-sun").addClass("fa-moon");
             localStorage.removeItem("dark-mode");
         }
     });
