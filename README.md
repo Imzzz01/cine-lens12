@@ -3,11 +3,11 @@
 - [Features and Functionalities](#features)
 - [Technologies used](#technologies)
 - [Future Enhancements](#future-enhancements)
+- [Design Rationale](#design-rationale)
 - [Internal and External Code](#internal-and-external-code)
 - [Validation](#validator)
 - [Commit Messages](#internal-and-external-code)
 - [Principles of Manual and Automated Testing](#principles-of-manual-and-automated-testing)
-- 
 - [Finished Project](#finished-project)
 - [Deployment](#deployment)
 
@@ -108,6 +108,36 @@ Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
     Integration and external API's
 CineLens is designed to make movie exploration easier, more enjoyable and customised to your preferences. This platform is built to enhance your movie-watching experience.
+
+# Design Rationale <a id="design-rationale"></a>
+
+Design Overview:
+
+The CineLens interface is designed to provide user experience for discovering and booking movies and dramas. The layout prioritises ease of navigation, with clear sections for recommendations, favorites and ticket booking.
+
+Color scheme:
+
+- Primary Color: Blue(#007bff) - Used for buttons and interactive elements.
+- Secondary Color: Light Grey (#f5f5f5) - Applied as the background color to ensure readability.
+- Accent Color: Dark Blue (#0056b3) - Hover color
+- Text Color: Dark Grey (#333) Ensures readability against the light background.
+- Dark Mode Background: Dark Gray (#333) - Used for body background in dark mode.
+- Dark mode text: White (#fff) - Ensures readablity in dark mode.
+
+Type of fonts used: 
+
+- Font Family: Sans-sarif fonts like Arial are used for clean appearance.
+- Font-Sizes: Larger fonts for headings and smaller fonts for body text.
+
+Layout:
+
+- Header: Contains the logo and nav links (Home, Recommendations, favorites, book tickets)
+- Search Bar: Placed in the center to allow users to quickly find dramas and movies.
+- Recommendations section: Displays movie/drama poster in carousel, with view details. 
+
+User Experience:
+
+The design primarly focuses on efficiency and readability, ensuring that users are able to find their movies and dramas and having the ability to book without any complexity. 
 
 
 # Internal and External Code <a id="internal-and-external-code"></a>
