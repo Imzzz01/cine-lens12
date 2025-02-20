@@ -21,7 +21,7 @@
 
 
 #README: CineLens(http://localhost:5501/) [CineLens]
-# Purpose of Froject <a id="purpose"></a>
+# Purpose of Project <a id="purpose"></a>
 
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
@@ -233,6 +233,8 @@ Automated testing and manual testing are both essential for software testing. Ea
 ![image](https://github.com/user-attachments/assets/83ac55c8-e949-4df6-aa3f-b16a3ee3f786)
 
 ![image](https://github.com/user-attachments/assets/298710bd-e0d2-428e-9b0f-3e094672e8df)
+
+![image](https://github.com/user-attachments/assets/73e322fd-eaef-40d4-945b-63fbb5a73a7d)
 
 
 # Deployment <a id="deployment"></a>
