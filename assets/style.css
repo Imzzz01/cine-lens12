@@ -166,8 +166,8 @@ body.dark-mode#movie-search {
     color: white; /*White text color in dark mode*/
 }
 
-.carousel-item{
-   
+.carousel-item :active{
+   display: flex; /*Use flexbox for the carousel item*/
    padding: 20px; /*Adds padding inside the carousel item*/
    width: 100%; /*Set the width to full */
    height: auto; /*Allows the height to adjust based on the content*/
@@ -175,20 +175,13 @@ body.dark-mode#movie-search {
    justify-content: center; /*Center the content horizontally*/
 } 
 
-.carousel-item img{
-    width: 400px; /*Set a fixed width for the image*/;
+.carousel-item :active img{
+    max-width: 100%; /*Set a fixed width for the image*/;
     height: auto; /*Allows the height to adjust based on the content*/
-    border-radius: 10px; /*Rounded corners for the image*/
-    object-fit: cover; /*Ensures the image covers the area without distortion*/
-    align-items: center; /*Center the image vertically*/;
-    justify-content: center;
+     margin: 0 auto;
 }
 
-.carousel-control-prev, .carousel-control-next{
-     width: 5%; /*Set a fixed width for the controls*/
-     background-color: rgba(0,0,0,0.5); /*Adds a semi-transparent background*/
-     border-radius: 10px; /*Rounded corners for the controls*/
-    }
+
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
 filter: invert(1) /*Inverts the color of the icon */
@@ -197,7 +190,7 @@ filter: invert(1) /*Inverts the color of the icon */
     background: rgba(0,0,0,0.5); /*Adds a semi-transparent background to the caption*/
     padding: 10px; /*Adds padding inside the caption*/
     border-radius: 5px; /*Rounded corners for the caption*/
-    position: absolute; /*Position the caption absolutely*/
+    position:absolute; /*Set the position to static*/
     bottom: 0; /*Align the caption to the bottom*/
     left: 50%; /*Align the caption to the center*/
     transform: translate(-50%); /*Center the caption horizontally*/
