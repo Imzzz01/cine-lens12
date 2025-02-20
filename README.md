@@ -1,3 +1,9 @@
+# purpose of project <a id="purpose"></a>
+
+
+#Table of contents
+[Purpose of Project] #project
+
 Links for screenshots
 1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
    
@@ -10,7 +16,7 @@ Links for screenshots
 
 #README: CineLens(http://localhost:5501/) [CineLens]
 
-Purpose of project 
+[Purpose of Project] #purpose
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
 CineLens is not just a movie database; it is an interactive platform that empowers users to engage with their favourite films and shows in dynamic ways. Whether you're looking for recommendations based on your viewing habits, tracking how many movies you have added and removed from favourites, or simply enjoying trailers and detailed movie information, cinelens enhances every step of your cinematic journey.
