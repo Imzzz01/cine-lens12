@@ -134,7 +134,7 @@ fetchAndPopulateMovies();
                     src="${poster}"
                     alt="${movie.title}
                     class="d-block">
-                     <div class="carousel-caption d-none d-md-block">
+                     <div class="carousel-caption">
                    <h5>${movie.title}</h5>
                    <button
                    class="btn btn-outline-light"
