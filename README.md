@@ -222,20 +222,18 @@ Automated testing and manual testing are both essential for software testing. Ea
 
 # Finish Project <a id="finished-project"></a>
 
+![image](https://github.com/user-attachments/assets/3044906a-f5dc-4916-8fc3-3f463e647446)
 
-![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
+![image](https://github.com/user-attachments/assets/827d55fd-8667-4f3d-8b83-12dc931eac28)
 
-![cine2](https://github.com/user-attachments/assets/b087e4d0-60b1-4e6d-bbb5-dbb9d0c9d18f)
+![image](https://github.com/user-attachments/assets/9a7127ca-c3e9-4d4c-85da-45f8991457cc)
 
-![cine3](https://github.com/user-attachments/assets/552d32b0-a760-460d-a440-e1612d50a22e)
+![image](https://github.com/user-attachments/assets/7ae6cf97-273a-443e-be56-047db92828d8)
 
-![cine4](https://github.com/user-attachments/assets/451ef73a-7918-4b00-b5d5-58d8fc6886dc)
+![image](https://github.com/user-attachments/assets/83ac55c8-e949-4df6-aa3f-b16a3ee3f786)
 
-![cine5](https://github.com/user-attachments/assets/0aac2b04-e034-486c-81f9-31e464e87e06)
+![image](https://github.com/user-attachments/assets/298710bd-e0d2-428e-9b0f-3e094672e8df)
 
-![cine6](https://github.com/user-attachments/assets/e75c7280-5a16-4440-8d44-12ba2451d375)
-
-![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
 
 # Deployment <a id="deployment"></a>
 
