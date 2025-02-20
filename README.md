@@ -1,14 +1,34 @@
-Links for screenshots
-1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
+## Table of Contents
+- [Purpose of Project](#purpose)
+- [Features and Functionalities](#features)
+- [Technologies used](#technologies)
+- [Future Enhancements](#future-enhancements)
+- [Internal and External Code](#internal-and-external-code)
+- [Validation](#validator)
+- [Commit Messages](#internal-and-external-code)
+- [Principles of Manual and Automated Testing](#principles-of-manual-and-automated-testing)
+- 
+- [Finished Project](#finished-project)
+- [Deployment](#deployment)
+
+## Links For UX Design | Gant chart | Test Plan
+- [UX Design : Wireframe](https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D)
+   
+- [Gant Chart](https://1drv.ms/x/c/4825e675d30aceda/EfiedI_ICOpJopS4BJ0eRKwB5wiZRHm7Uah5UheRfxJrqA?e=4OMedM)
+
+   
+- [3.2 | 3.4 | 3.5 Test Plan](https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=nyPEjN)
+
 
 #README: CineLens(http://localhost:5501/) [CineLens]
+# Purpose of Froject <a id="purpose"></a>
 
-Purpose of project 
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
 CineLens is not just a movie database; it is an interactive platform that empowers users to engage with their favourite films and shows in dynamic ways. Whether you're looking for recommendations based on your viewing habits, tracking how many movies you have added and removed from favourites, or simply enjoying trailers and detailed movie information, cinelens enhances every step of your cinematic journey.
 
-Features and functionalities:
+# Features and Functionalities<a id="features"></a>
+
 • Movie search and Discovery:
 
   • Users can search for movies by title 
@@ -55,8 +75,8 @@ Features and functionalities:
   • Enhanced animations and transitions for smooth user experience.
   • A variety of interactive UI elements including buttons, sliders, carousels and modals.
 
-Technologies Used : 
-
+# Technologies <a id="technologies"></a>
+ 
 • Front End 
   • HTML5 : For structuring the web pages
   • CSS3 : For styling and making the website responsive
@@ -70,7 +90,8 @@ Technologies Used :
 • Back End
   • LocalStorage is used for storing user favorites, ensuring data persistence even after page refresh.
 
-Future Enhancements: 
+# Future enhancements <a id="future-enhancements"></a>
+ 
 User Accounts: 
   • Users can signup, login and maintain a personalised account.
   • Once Logged in, users can:
@@ -85,38 +106,33 @@ Movie rating System:
 
 Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
-
+    Integration and external API's
 CineLens is designed to make movie exploration easier, more enjoyable and customised to your preferences. This platform is built to enhance your movie-watching experience.
 
-Integration and external API's
 
-Internal or external reference:
+# Internal and External Code <a id="internal-and-external-code"></a>
+
 1. I have used grid system from bootstrap, to ensure that my APP is responsive on all devices such as Laptops, PC, Mobile etc (Responsiveness) https://getbootstrap.com/
 2. I have used jquery for my project as it makes it easy to use javascript for my website - https://jquery.com/
 3. I have cdn used sweet alert 2 cdn to display notification when a movie is added to favourites and also removed. -  https://www.bing.com/search?q=sweetalert2%20cdn&qs=n&form=QBRE&sp=-1&lq=0&pq=&sc=0-0&sk=&cvid=0C55985B3F3B49ADB5289391744D575C&ghsh=0&ghacc=0&ghpl=
 4. I have used icons from fontawesome such as previous and next for my carousel slides.- https://fontawesome.com/
 5. I have used an omdb api to handle my app, where it fetches data, like movies, posters, etc - https://www.omdbapi.com/
 
-UX Design Wireframe (Draw.IO)
-![image](https://github.com/user-attachments/assets/e5c084ee-8be1-492a-b8df-4fce41b73fa8)
+# Validation <a id="validator"></a>
 
-![image](https://github.com/user-attachments/assets/053ac37f-d3aa-44f9-8731-904800b5e2b1)
-
-![image](https://github.com/user-attachments/assets/0480a04e-4128-4395-a580-531978476861)
-
-
-HTML and CSS validation 
 ![image](https://github.com/user-attachments/assets/256e24ce-b445-4d1d-a39c-eab55aac19a8)
 
 ![image](https://github.com/user-attachments/assets/f177ca2b-258a-4250-bd11-0d216f30899f)
 
 
-  
-Commit Messages: 
+# Commit Messages <a id="commit-messages"></a>
+
 ![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
 
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
-Mnaual testing and Automated testing
+
+# Principles of Manual and Automated Testing <a id="principles-of-manual-and-automated-testing"></a>
+3.1 
 
 Manual testing: This type of test uses an application's functions and features. It is done by writing down test cases. This test can be quite helpful; however, we tend to make mistakes and are bound to create errors. Also, it could be time-consuming. Different types of manual testing exist, such as white box testing, black box testing, and grey box testing. Each test has its purpose in detecting bugs and how to get rid of those bugs from the application.
 
@@ -147,39 +163,36 @@ Disadvantages:
 - You need experience.
 - Expensive
   
-Automated testing: This involves using automation tools to execute the test cases. In this test, special software is used to check and test a software product instead of manually testing the application.
+Automated testing: This involves using automation tools to execute the test cases. Instead of manually testing the application, this test uses special software to check and test a software product.
 
 Key principles of automated testing:
+· Test execution by tools: Tests used: selenium, JUnit or TestNg. This enhances efficiency.
 
-- Test execution by tools: Tests used: selenium, JUnit or TestNg.
-  
-- Repeatability:  Automates tasks which are helpful for testers.
-  
-- Speed and efficiency: Automated tests can be executed faster than manual testing.
-  
-- Consistent and reliable: Automated tests are consistent, with no human errors.
-  
+· Repeatability: Automates tasks which are helpful for testers. Scripts can be reused multiple times.
+
+· Speed and efficiency: Automated tests can be executed faster than manual testing.
+
+· Consistent and reliable: Automated tests are consistent with no human errors.
+
 When to use automated testing:
+Performance Testing: This tests how the app handles large user volumes, evaluates how any application could perform under stress, etc.
 
-- Performance Testing: This tests how the app handles large user volumes.
+Large-scale projects: When the project has many features and frequent updates. Automated testing ensures comprehensive coverage.
 
-- Large-scale projects: When the project has many features and frequent updates.
+Repetitive tasks: These are tasks that need to be executed frequently.
 
+When to deploy automated testing?
+Repetitive tasks: When you have repetitive test cases that need to be executed repeatedly, in this case, we can point out regression testing. 
 
-Manual test plan:
-![image](https://github.com/user-attachments/assets/c2768831-8250-476d-9d0e-aba67d38486d)
+Frequent code changes: Where code changes frequently, we can use automated testing to validate the impact of these changes.
 
-![image](https://github.com/user-attachments/assets/1597cdb0-72b8-4bc3-bf80-8b2ce22e1e4c)
+Complex scenarios: Automated testing would be a good way to test complex scenarios, such as performance testing, load testing, stress testing, etc.
 
-![image](https://github.com/user-attachments/assets/e3ae8453-c2ba-4c05-be26-c08e970fbf6c)
+Automated testing and manual testing are both essential for software testing. Each has its strengths and weaknesses, but both play a massive role in providing efficiency. For example, automated testing could be used for repetitive regression and performance. Manual testing, which can be done by a human, is for exploratory and usability. It's highly effective in testing scenarios that may be harder to automate. They are both essential tests that can be used for different purposes.
 
-![image](https://github.com/user-attachments/assets/6b3e3650-b530-40ba-b2d3-2f3d574de70b)
-
-![image](https://github.com/user-attachments/assets/97ab625a-86aa-4750-8fff-31e9be31bfd6)
-
+# Finish Project <a id="finished-project"></a>
 
 
-Finished project - screenshots 
 ![cine1](https://github.com/user-attachments/assets/cb4a817d-5b65-4ef3-9c18-511a48e36a7b)
 
 ![cine2](https://github.com/user-attachments/assets/b087e4d0-60b1-4e6d-bbb5-dbb9d0c9d18f)
@@ -194,7 +207,7 @@ Finished project - screenshots
 
 ![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
 
-Deployment 
+# Deployment <a id="deployment"></a>
 
 This project was developed by using VSCODE, committed to git and pushed to Github.
 
