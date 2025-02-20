@@ -12,7 +12,7 @@
 - [Deployment](#deployment)
 
 ## Links For UX Design | Gant chart | Test Plan
-- [UX Design : Wireframe](https://1drv.ms/u/c/4825e675d30aceda/EX4WaRGTRmtEtmsSuAp6OrIBizR6VT2wwypvju0MXoBqOA?e=Szd5LZ)
+- [UX Design : Wireframe](https://app.diagrams.net/?libs=general;mockups#W4825E675D30ACEDA%2F4825E675D30ACEDA!s1169167e4693446bb66b12b80a7a3ab2#%7B%22pageId%22%3A%22f1b7ffb7-ca1e-a977-7cf5-a751b3c06c05%22%7D)
    
 - [Gant Chart](https://1drv.ms/x/c/4825e675d30aceda/EfiedI_ICOpJopS4BJ0eRKwB5wiZRHm7Uah5UheRfxJrqA?e=4OMedM)
 
