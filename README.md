@@ -1,3 +1,11 @@
+## Table of Contents
+- [Purpose of Project](#purpose)
+- [Features and Functionalities](#features)
+- [Technologies used](#technologies)
+- [Internal and External Code](#internal-and-external-code)
+- [Principles of Manual and Automated Testing](#principles)
+- [Finished Project](#finished-project)
+- [Deployment](#deployment)
 
 Links for screenshots
 1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
@@ -11,10 +19,11 @@ Links for screenshots
 #README: CineLens(http://localhost:5501/) [CineLens]
 # purpose of project <a id="purpose"></a>
 
-[Purpose of Project] #purpose
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
 CineLens is not just a movie database; it is an interactive platform that empowers users to engage with their favourite films and shows in dynamic ways. Whether you're looking for recommendations based on your viewing habits, tracking how many movies you have added and removed from favourites, or simply enjoying trailers and detailed movie information, cinelens enhances every step of your cinematic journey.
+
+# features and functionalities<a id="features"></a>
 
 Features and functionalities:
 • Movie search and Discovery:
@@ -63,6 +72,8 @@ Features and functionalities:
   • Enhanced animations and transitions for smooth user experience.
   • A variety of interactive UI elements including buttons, sliders, carousels and modals.
 
+# technologies <a id="technologies"></a>
+
 Technologies Used : 
 
 • Front End 
@@ -77,6 +88,8 @@ Technologies Used :
 
 • Back End
   • LocalStorage is used for storing user favorites, ensuring data persistence even after page refresh.
+
+# future enhancements <a id="future-enhancements"></a>
 
 Future Enhancements: 
 User Accounts: 
@@ -97,7 +110,7 @@ Improved Movie details:
 CineLens is designed to make movie exploration easier, more enjoyable and customised to your preferences. This platform is built to enhance your movie-watching experience.
 
 
-# Internal and External code <a id="Internal and External code"></a>
+# Internal and External Code <a id="internal-and-external-code"></a>
 Internal or external reference:
 1. I have used grid system from bootstrap, to ensure that my APP is responsive on all devices such as Laptops, PC, Mobile etc (Responsiveness) https://getbootstrap.com/
 2. I have used jquery for my project as it makes it easy to use javascript for my website - https://jquery.com/
@@ -119,7 +132,7 @@ Commit Messages:
 
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
 
-# Principles <a id="Principles of Manual and Automated testing"></a>
+# Principles <a id="principles-of-manual-and-automated-testing"></a>
 3.1 Principles of Mnaual testing and Automated testing: 
 
 Manual testing: This type of test uses an application's functions and features. It is done by writing down test cases. This test can be quite helpful; however, we tend to make mistakes and are bound to create errors. Also, it could be time-consuming. Different types of manual testing exist, such as white box testing, black box testing, and grey box testing. Each test has its purpose in detecting bugs and how to get rid of those bugs from the application.
@@ -178,7 +191,7 @@ Complex scenarios: Automated testing would be a good way to test complex scenari
 
 Automated testing and manual testing are both essential for software testing. Each has its strengths and weaknesses, but both play a massive role in providing efficiency. For example, automated testing could be used for repetitive regression and performance. Manual testing, which can be done by a human, is for exploratory and usability. It's highly effective in testing scenarios that may be harder to automate. They are both essential tests that can be used for different purposes.
 
-# Finish Project <a id="Finished Project"></a>
+# Finish Project <a id="finished-project"></a>
 
 
 
@@ -197,7 +210,7 @@ Finished project - screenshots
 
 ![cine7](https://github.com/user-attachments/assets/c1f860cb-274b-4f57-94d6-a2795a332408)
 
-# Deployment <a id="Deployment"></a>
+# Deployment <a id="deployment"></a>
 Deployment 
 
 This project was developed by using VSCODE, committed to git and pushed to Github.
