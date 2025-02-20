@@ -1,5 +1,12 @@
 Links for screenshots
 1. UX Design : Wireframe: https://app.diagrams.net/#W4825E675D30ACEDA%2F4825E675D30ACEDA!s5809ad90f73b4c73adff7d7a3efbcb76#%7B%22pageId%22%3A%2203018318-947c-dd8e-b7a3-06fadd420f32%22%7D
+   
+2. Gant Chart: https://1drv.ms/x/c/4825e675d30aceda/EfiedI_ICOpJopS4BJ0eRKwB5wiZRHm7Uah5UheRfxJrqA?e=4OMedM
+
+   
+3. 3.2 | 3.4 | 3.5 Test Plan https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=nyPEjN
+
+
 
 #README: CineLens(http://localhost:5501/) [CineLens]
 
@@ -97,12 +104,6 @@ Internal or external reference:
 4. I have used icons from fontawesome such as previous and next for my carousel slides.- https://fontawesome.com/
 5. I have used an omdb api to handle my app, where it fetches data, like movies, posters, etc - https://www.omdbapi.com/
 
-UX Design Wireframe (Draw.IO)
-![image](https://github.com/user-attachments/assets/e5c084ee-8be1-492a-b8df-4fce41b73fa8)
-
-![image](https://github.com/user-attachments/assets/053ac37f-d3aa-44f9-8731-904800b5e2b1)
-
-![image](https://github.com/user-attachments/assets/0480a04e-4128-4395-a580-531978476861)
 
 
 HTML and CSS validation 
@@ -116,7 +117,8 @@ Commit Messages:
 ![commit message](https://github.com/user-attachments/assets/230bcdc9-d26e-451e-90fa-2488b9360dcb)
 
 ![commit message1](https://github.com/user-attachments/assets/c69c789b-84bb-450d-9914-bd1bc568ef4e)
-Mnaual testing and Automated testing
+
+3.1 Principles of Mnaual testing and Automated testing: 
 
 Manual testing: This type of test uses an application's functions and features. It is done by writing down test cases. This test can be quite helpful; however, we tend to make mistakes and are bound to create errors. Also, it could be time-consuming. Different types of manual testing exist, such as white box testing, black box testing, and grey box testing. Each test has its purpose in detecting bugs and how to get rid of those bugs from the application.
 
@@ -147,35 +149,34 @@ Disadvantages:
 - You need experience.
 - Expensive
   
-Automated testing: This involves using automation tools to execute the test cases. In this test, special software is used to check and test a software product instead of manually testing the application.
+Automated testing: This involves using automation tools to execute the test cases. Instead of manually testing the application, this test uses special software to check and test a software product.
 
 Key principles of automated testing:
+· Test execution by tools: Tests used: selenium, JUnit or TestNg. This enhances efficiency.
 
-- Test execution by tools: Tests used: selenium, JUnit or TestNg.
-  
-- Repeatability:  Automates tasks which are helpful for testers.
-  
-- Speed and efficiency: Automated tests can be executed faster than manual testing.
-  
-- Consistent and reliable: Automated tests are consistent, with no human errors.
-  
+· Repeatability: Automates tasks which are helpful for testers. Scripts can be reused multiple times.
+
+· Speed and efficiency: Automated tests can be executed faster than manual testing.
+
+· Consistent and reliable: Automated tests are consistent with no human errors.
+
 When to use automated testing:
+Performance Testing: This tests how the app handles large user volumes, evaluates how any application could perform under stress, etc.
 
-- Performance Testing: This tests how the app handles large user volumes.
+Large-scale projects: When the project has many features and frequent updates. Automated testing ensures comprehensive coverage.
 
-- Large-scale projects: When the project has many features and frequent updates.
+Repetitive tasks: These are tasks that need to be executed frequently.
+
+When to deploy automated testing?
+Repetitive tasks: When you have repetitive test cases that need to be executed repeatedly, in this case, we can point out regression testing. 
+
+Frequent code changes: Where code changes frequently, we can use automated testing to validate the impact of these changes.
+
+Complex scenarios: Automated testing would be a good way to test complex scenarios, such as performance testing, load testing, stress testing, etc.
+
+Automated testing and manual testing are both essential for software testing. Each has its strengths and weaknesses, but both play a massive role in providing efficiency. For example, automated testing could be used for repetitive regression and performance. Manual testing, which can be done by a human, is for exploratory and usability. It's highly effective in testing scenarios that may be harder to automate. They are both essential tests that can be used for different purposes.
 
 
-Manual test plan:
-![image](https://github.com/user-attachments/assets/c2768831-8250-476d-9d0e-aba67d38486d)
-
-![image](https://github.com/user-attachments/assets/1597cdb0-72b8-4bc3-bf80-8b2ce22e1e4c)
-
-![image](https://github.com/user-attachments/assets/e3ae8453-c2ba-4c05-be26-c08e970fbf6c)
-
-![image](https://github.com/user-attachments/assets/6b3e3650-b530-40ba-b2d3-2f3d574de70b)
-
-![image](https://github.com/user-attachments/assets/97ab625a-86aa-4750-8fff-31e9be31bfd6)
 
 
 
