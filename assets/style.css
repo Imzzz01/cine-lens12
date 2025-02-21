@@ -166,19 +166,18 @@ body.dark-mode#movie-search {
     color: white; /*White text color in dark mode*/
 }
 
-.carousel-item :active{
-   display: flex; /*Use flexbox for the carousel item*/
-   padding: 20px; /*Adds padding inside the carousel item*/
-   width: 100%; /*Set the width to full */
-   height: auto; /*Allows the height to adjust based on the content*/
+.carousel-item {
+   
+   text-align: center; /*Center the text inside the carousel item*/
    align-items: center; /*Center the content vertically*/
    justify-content: center; /*Center the content horizontally*/
 } 
 
-.carousel-item :active img{
+.carousel-item img{
     max-width: 100%; /*Set a fixed width for the image*/;
     height: auto; /*Allows the height to adjust based on the content*/
-     margin: 0 auto;
+    margin: 0 auto; /*Center the image horizontally*/
+    border-radius: 50px; /*Rounded corners for the image*/
 }
 
 
@@ -187,19 +186,19 @@ body.dark-mode#movie-search {
 filter: invert(1) /*Inverts the color of the icon */
 }
 .carousel-caption{
-    background: rgba(0,0,0,0.5); /*Adds a semi-transparent background to the caption*/
-    padding: 10px; /*Adds padding inside the caption*/
-    border-radius: 5px; /*Rounded corners for the caption*/
-    position:absolute; /*Set the position to static*/
+    position:absolute; /*Set the position to absolute*/
     bottom: 0; /*Align the caption to the bottom*/
     left: 50%; /*Align the caption to the center*/
     transform: translate(-50%); /*Center the caption horizontally*/
-    width: 50%; /*Set the width of the caption*/
+    background: rgba(241, 235, 235, 0.5); /*Adds a semi-transparent background to the caption*/
+    padding: 10px; /*Adds padding inside the caption*/
+    border-radius: 30px; /*Rounded corners for the caption*/
+    width: 26%; /*Allows the caption to adjust based on the content*/
     text-align: center; /*Center the text inside the caption*/;
 }
 .carousel-caption h5{
     font-size: 1.25rem; /*Larger font size for the caption title*/
-    color: #fff; /*White text color for the caption title*/
+    color: #f8f5f5; /*White text color for the caption title*/
     margin-bottom: 10px; /*Adds space below the caption title*/
 }
 
