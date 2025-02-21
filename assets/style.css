@@ -167,7 +167,7 @@ body.dark-mode#movie-search {
 }
 
 .carousel-item {
-   
+  
    text-align: center; /*Center the text inside the carousel item*/
    align-items: center; /*Center the content vertically*/
    justify-content: center; /*Center the content horizontally*/
@@ -176,8 +176,8 @@ body.dark-mode#movie-search {
 .carousel-item img{
     max-width: 100%; /*Set a fixed width for the image*/;
     height: auto; /*Allows the height to adjust based on the content*/
-    margin: 0 auto; /*Center the image horizontally*/
-    border-radius: 70px; /*Rounded corners for the image*/
+    margin: auto; /*Center the image horizontally*/
+    border-radius: 74px; /*Rounded corners for the image*/
 }
 
 
@@ -192,7 +192,7 @@ filter: invert(1) /*Inverts the color of the icon */
     transform: translate(-50%); /*Center the caption horizontally*/
     background: rgba(44, 51, 50, 0.76); /*Adds a semi-transparent background to the caption*/
     padding: 10px; /*Adds padding inside the caption*/
-    border-radius: 30px; /*Rounded corners for the caption*/
+    border-radius: 60px; /*Rounded corners for the caption*/
     width: 26%; /*Allows the caption to adjust based on the content*/
     text-align: center; /*Center the text inside the caption*/;
 }
@@ -247,6 +247,26 @@ body.dark-mode .btn-close {
     filter: invert(1); /*Inverts the color of the close button*/
 }
 
+#live-background {
+    position: fixed; /*Fixed position*/
+    top: 0; /*Align to the top*/
+    left: 0; /*Align to the left*/
+    width: 100%; /*Full width*/
+    height: 100%; /*Full height*/
+    z-index: -1; /*Behind other elements*/
+    object-fit: cover; /*Cover the entire area*/
+}
+
+.modal-content {
+    position: relative; /*Relative position*/
+    z-index: 1; /*Above the background*/;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px; /*Rounded corners for the modal content*/
+    padding: 20px; /*Adds padding inside the modal content*/
+
+}
+
+
 
 @media screen and (max-width: 768px){
     .movie-card{
@@ -258,7 +278,12 @@ body.dark-mode .btn-close {
     #search-btn {
         font-size: 14px; /*Reduces font size for the search button on small screens*/
     }
+
+    .carousel-item img{
+        border-radius: 70px; /*Adjusts the border radius of the image on small screens*/
+    }
     .carousel-caption{
-        width: 60%; /*Adjusts the width of the caption on small screens*/
+        width: 52%; /*Adjusts the width of the caption on small screens*/
+        border-radius: 65px; /*Adjusts the border radius of the caption on small screens*/
     }
 }
