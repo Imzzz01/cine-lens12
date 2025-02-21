@@ -82,7 +82,7 @@ body.dark-mode h1{
     width: 220px; /*Set a fixed width for the movie cards*/
     text-align: center;/*Centers the text inside the card*/
     background-color: #fff;/*White background for the cards*/
-    border-radius: 8px;/*Rounded corners for the cards*/
+    border-radius: 40px;/*Rounded corners for the cards*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);/*Adds a soft shadow to the cards*/
     overflow: hidden;/*Ensures content doesn't overflow the card*/
     transition: transform 0.3s ease; /*add transition*/
@@ -103,7 +103,7 @@ body.dark-mode h1{
 
 .movie-card p {
     font-size: 14px; /* Smaller font size for the year*/
-    color: #555; /* Medium gray color for the text*/
+    color: #9c9696; /* Medium gray color for the text*/
 }
 
 
@@ -158,7 +158,7 @@ body.dark-mode {
 }
 body.dark-mode .movie-card {
     background-color: #444; /*Dark background color for movie cards in dark mode*/
-   
+    color: #fff; /*White text color in dark mode*/
 }
 
 body.dark-mode#movie-search {
@@ -177,7 +177,7 @@ body.dark-mode#movie-search {
     max-width: 100%; /*Set a fixed width for the image*/;
     height: auto; /*Allows the height to adjust based on the content*/
     margin: 0 auto; /*Center the image horizontally*/
-    border-radius: 50px; /*Rounded corners for the image*/
+    border-radius: 70px; /*Rounded corners for the image*/
 }
 
 
@@ -190,7 +190,7 @@ filter: invert(1) /*Inverts the color of the icon */
     bottom: 0; /*Align the caption to the bottom*/
     left: 50%; /*Align the caption to the center*/
     transform: translate(-50%); /*Center the caption horizontally*/
-    background: rgba(241, 235, 235, 0.5); /*Adds a semi-transparent background to the caption*/
+    background: rgba(44, 51, 50, 0.76); /*Adds a semi-transparent background to the caption*/
     padding: 10px; /*Adds padding inside the caption*/
     border-radius: 30px; /*Rounded corners for the caption*/
     width: 26%; /*Allows the caption to adjust based on the content*/
@@ -220,6 +220,33 @@ footer {
 
 }
 
+body.dark-mode .modal-content {
+    background-color: #333; /*White background for the modal content in dark mode*/
+    color: #fff; /*White text color in dark mode*/
+}
+
+body.dark-mode .modal-header {
+    border-bottom: 1px solid #444; /*Dark border at the bottom of the header*/
+}
+
+body.dark-mode .modal-footer{
+    border-top: 1px solid #fff; /*White border at the top of the footer*/
+}
+
+body.dark-mode .form-control{
+    background-color: #444; /*Dark background for the form input*/;
+    color: #fff; /*White text color for the form input*/
+    border-color: #555; /*Dark border color for the form input*/
+}
+
+body.dark-mode .form-control::placeholder{
+    color: #bbb; /*Light gray placeholder text color*/
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1); /*Inverts the color of the close button*/
+}
+
 
 @media screen and (max-width: 768px){
     .movie-card{
@@ -230,5 +257,8 @@ footer {
     }
     #search-btn {
         font-size: 14px; /*Reduces font size for the search button on small screens*/
+    }
+    .carousel-caption{
+        width: 60%; /*Adjusts the width of the caption on small screens*/
     }
 }
