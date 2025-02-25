@@ -17,6 +17,7 @@ $("#search-btn").click(function () {
         $("#movie-results").show(); //Show movie results
 }
 });
+
 //Back to recommendations button click event
 $("#back-to-recommendations-btn").click(function (){
     $("#movie-results").empty(); // Clear movie results
@@ -138,7 +139,7 @@ fetchAndPopulateMovies();
                    <h5>${movie.title}</h5>
                    <button
                    class="btn btn-outline-dark"
-                onclick="getMovieDetails("${movie.imdbID}")
+                onclick="getMovieDetails('${movie.imdbID}')"
                    ">View Details</button>
 
          </div>
