@@ -138,9 +138,7 @@ fetchAndPopulateMovies();
                      <div class="carousel-caption">
                    <h5>${movie.title}</h5>
                    <button
-                   class="btn btn-outline-dark"
-                onclick="getMovieDetails('${movie.imdbID}')"
-                   ">View Details</button>
+                   class="btn btn-outline-dark view-details-btn" data-imdbid="${movie.imdbID}">View Details</button>
 
          </div>
          </div>
@@ -152,8 +150,12 @@ fetchAndPopulateMovies();
             url:"https://www.omdbapi.com/"
         });
     });
-
   }
+
+  $(document).on("click", ".view-details-btn", function () {
+    const imdbID = $(this).data("imdbid");
+    getMovieDetails(imdbID);
+  })
     // Dark-mode toggle functionality
     $(document).ready(function() {
 
