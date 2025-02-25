@@ -79,12 +79,16 @@ CineLens is not just a movie database; it is an interactive platform that empowe
  
 • Front End 
   • HTML5 : For structuring the web pages
+  
   • CSS3 : For styling and making the website responsive
+  
   • Javascript (jQuery) : for interactivity and DOM manipulation 
+  
   • Bootsrap : For a responsive and sleek design
  
 • API's 
-  • Trakt Tv API : For movie data, including movie titles, images, ratings, and other details. 
+  • imdb API : For movie data, including movie titles, images, ratings, and other details. 
+  
   • SweetAlert : For displaying notifications when adding or removing movies from favourites.
 
 • Back End
