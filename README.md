@@ -98,8 +98,11 @@ CineLens is not just a movie database; it is an interactive platform that empowe
  
 User Accounts: 
   • Users can signup, login and maintain a personalised account.
+  
   • Once Logged in, users can:
+  
   • Save Favorite movies to their profile
+  
   • Access a personal Watchlist to keep track of movies they want to watch in the future.
 
 User Authentication 
@@ -111,6 +114,7 @@ Movie rating System:
 Improved Movie details:
   • Add features like movie reviews, box office data, steaming availability etc
     Integration and external API's
+    
 CineLens is designed to make movie exploration easier, more enjoyable and customised to your preferences. This platform is built to enhance your movie-watching experience.
 
 # Design Rationale <a id="design-rationale"></a>
