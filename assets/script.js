@@ -8,14 +8,18 @@ $(document).ready(function () {
     // Search button click event
 $("#search-btn").click(function () {
     const query = $("#movie-search").val().trim(); //Get the search input value
-    if (query !== "") {
+
+
+        if (!validateInput(query)) {
+            return;
+        }
           searchMovie(query); // Call function to search for movies
           $("#recommended-section").hide(); //Hide recommended movies section
           $("#back-to-recommendations-btn").show();
         //Show back to recommendations button
          $("#movie-details").hide(); //Hide movie details
         $("#movie-results").show(); //Show movie results
-}
+
 });
 
 //Back to recommendations button click event
@@ -30,13 +34,43 @@ $("#back-to-recommendations-btn").click(function (){
   $("#movie-search").keypress(function(e) {
      if(e.which === 13) {
         const query = $("#movie-search").val().trim();
-        if (query !== "") {
-            searchMovie(query);
+        
+        if (!validateInput(query)) {
+            return;
         }
+            searchMovie(query);
+        
           $("#recommended-section").hide();  // Show reccomendations
           $("#back-to-recommendations-btn").hide(); // Hide buttom
     }
   });
+
+  function validateInput(query) {
+    if (query === "") {
+        showError("Please enter a movie/drama name.");
+        return false;
+    }
+
+    if (!/^[a-zA-Z0-9 ]+$/.test(query)) {
+        showError("Please enter a valid movie/drama name (letters only).");
+        return false;
+    }
+    clearError();
+    return true;
+  }
+
+  function showError(message) {
+    $("#search-error").text(message).show();
+    $("#movie-results").empty().hide();
+    $("#movie-details").empty().hide();
+  }
+
+  function clearError() {
+    $("#search-error").text("").hide();
+  }
+});
+
+
 
     const query = "movies"; // Search query for drama movies
      const type = "movie"; // Type of search
@@ -88,7 +122,7 @@ function handleFormSubmission(event) {
 $("#ticket-form").on("submit", handleFormSubmission);
 
 fetchAndPopulateMovies();
-});
+
 // Function to load recommended movies
   function loadRecommendedMovies() {
     const recommendedMovies = [
