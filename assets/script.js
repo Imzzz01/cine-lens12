@@ -1,3 +1,5 @@
+/*global $, document, alert, Swal, console, localStorage, button,*/
+
 
 const OMDbApiKey = "2fee485b"; //OMDB API key for fetching data
 
@@ -34,12 +36,12 @@ $("#back-to-recommendations-btn").click(function (){
   $("#movie-search").keypress(function(e) {
      if(e.which === 13) {
         const query = $("#movie-search").val().trim();
-        
+
         if (!validateInput(query)) {
             return;
         }
             searchMovie(query);
-        
+
           $("#recommended-section").hide();  // Show reccomendations
           $("#back-to-recommendations-btn").hide(); // Hide buttom
     }
@@ -51,7 +53,7 @@ $("#back-to-recommendations-btn").click(function (){
         return false;
     }
 
-    if (!/^[a-zA-Z0-9 ]+$/.test(query)) {
+    if (!(/^[a-zA-Z0-9 ]+$/).test(query)) {
         showError("Please enter a valid movie/drama name (letters only).");
         return false;
     }
@@ -75,29 +77,33 @@ $("#back-to-recommendations-btn").click(function (){
     const query = "movies"; // Search query for drama movies
      const type = "movie"; // Type of search
      const page = 1;
-    
+
      function fetchAndPopulateMovies(){
      $.ajax({
-            url: `https://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${OMDbApiKey}`,
+         error: function(){
+         console.error("Error fetching movies from omdb.");
+   },
             method: "GET",
             success: function(data) {
                 if (data.Response === "True") {
                     const movies = data.Search;
                     const movieSelect = $("#movie-select");
                     movieSelect.empty(); // Clear previous movies
-                    movieSelect.append("<option value=''>Select a movie</option>");
-                    
+                    movieSelect.append
+                    ("<option value=''>Select a movie</option>");
+
                     movies.forEach(function(movie) {
-                    movieSelect.append(`<option value="${movie.imdbID}">${movie.Title}</option>`);         
+                 movieSelect.append
+                 (`<option value="${movie.imdbID}">
+                 ${movie.Title}</option>`);
         });
 
     } else {
         console.error("No movies found.");
     }
 },
-   error: function(){
-    console.error("Error fetching movies from omdb.");
-   }
+  url: `https://www.omdbapi.com/?s=${query}
+         &type=${type}&page=${page}&apikey=${OMDbApiKey}`
 });
 
 }
@@ -114,8 +120,13 @@ function handleFormSubmission(event) {
         return;
     }
 
-    alert(`booking confirmed!\nMovie: ${selectedMovie}\nDate: ${selectedDate}\nTime: ${selectedTime}\nTickets: ${numberOfTickets}`);
-    console.log("Form Data: ", { selectedMovie, selectedDate, selectedTime, numberOfTickets});
+    alert(`booking confirmed!\nMovie: ${selectedMovie}\nDate;
+    ${selectedDate}\nTime;
+    ${selectedTime}\nTickets: ${numberOfTickets}`);
+    console.log("Form Data: ",
+                { numberOfTickets, selectedDate, selectedMovie,
+                 selectedTime
+                });
 
     $("ticket-form")[0].reset();
 }
@@ -172,7 +183,8 @@ fetchAndPopulateMovies();
                      <div class="carousel-caption">
                    <h5>${movie.title}</h5>
                    <button
-                   class="btn btn-outline-dark view-details-btn" data-imdbid="${movie.imdbID}">View Details</button>
+               class="btn btn-outline-dark view-details-btn"
+                   data-imdbid="${movie.imdbID}">View Details</button>
 
          </div>
          </div>
@@ -187,9 +199,9 @@ fetchAndPopulateMovies();
   }
 
   $(document).on("click", ".view-details-btn", function () {
-    const imdbID = $(this).data("imdbid");
+      const imdbID = $(this).data("imdbid");
     getMovieDetails(imdbID);
-  })
+  });
     // Dark-mode toggle functionality
     $(document).ready(function() {
 
@@ -268,7 +280,7 @@ $("#movie-results").html("<p>Error fetching data. Please try again later.</p>");
        style="cursor: pointer;">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
-    
+
         </div>
         `;
 
