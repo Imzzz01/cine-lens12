@@ -162,6 +162,9 @@ The design primarly focuses on efficiency and readability, ensuring that users a
 
 ![image](https://github.com/user-attachments/assets/f177ca2b-258a-4250-bd11-0d216f30899f)
 
+![image](https://github.com/user-attachments/assets/9f7b5010-bfb9-44e7-9ae4-509cc7a2a0fd)
+
+
 
 # Commit Messages <a id="commit-messages"></a>
 
