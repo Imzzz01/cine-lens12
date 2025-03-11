@@ -1,5 +1,7 @@
 ## Table of Contents
 - [Purpose of Project](#purpose)
+- [Target Audience](target-audience)
+- [User Query](user-query)
 - [Features and Functionalities](#features)
 - [Technologies used](#technologies)
 - [Future Enhancements](#future-enhancements)
@@ -26,6 +28,33 @@
 The goal of CineLens is to create a user-friendly, interactive movie discovery platform that offers a variety of features inspiring popular movie-related websites like IMDb, trakt.tv etc. The platform will not only help users find and explore movies, but also allow them to manage their movie preferences, watch trailers, track their favourites, and create a more personalised movie experience.
 
 CineLens is not just a movie database; it is an interactive platform that empowers users to engage with their favourite films and shows in dynamic ways. Whether you're looking for recommendations based on your viewing habits, tracking how many movies you have added and removed from favourites, or simply enjoying trailers and detailed movie information, cinelens enhances every step of your cinematic journey.
+
+# Target Audience<a id="target-audience"></a>
+
+CineLens is designed to cater to a diverse audience of movie enthusiasts who love watching movies and dramas. This platform was created to meet users' needs who enjoy exploring movies, tracking their favourites, and discovering new shows/movies.
+
+1. Movie watchers: These users want an easy way to find movies or dramas without spending too much time searching. My app has distinctive features, such as adding to favourites, detailed movie info, trailers, and the best part: being able to book tickets. This will attract movie watchers to use my app.
+
+2. Movie Enthusiasts: These include users who are passionate about movies and dramas and enjoy exploring detailed information about movies, such as cast, crew, plot, ratings, and trailers. They are most likely to use features like favourites and are more likely to recommend my app to family and friends.
+
+3. Tiktok users: Movies and dramas can go viral in a day, and every tiktok user has the habit of scrolling and can see a drama that they might like from the teaser/spoiler and might want to watch this movie/drama by saving the tiktok so that they can find the movie etc
+
+4. Kdrama/Jdrama/drama watchers: These users are more likely to use my app because they want to find out more about these specific dramas and movies. The majority of users are Kdrama fans.
+
+5. Student: Users who might study a movie for academic purposes.
+
+6. Families and friends: Families and friends are more likely to look for movies they can watch together
+
+# User Query<a id="user-query"></a>
+
+Scenario: A user named Lisa is a casual movie watcher who spends most of her time watching movies and dramas. She is trying to find a website or platform where she can easily find movies, access movie details, watch trailers, and keep track of her favourites. 
+
+User Query: "I want to find a movie to watch, as I am very interested in different types of movies and want to explore the vast genres; I need a platform where I can search for the movie I have in mind and also watch the trailer, so I know that this movie will get me hooked and I will enjoy it. Also, I would love it if the platform could share their recommended movies or dramas, as I enjoy watching new movies and dramas." Thank you!
+
+Scenario: A user named Ryan is a TikTok user and spends his time endlessly scrolling until an interesting movie comes up on his Fyp. He's intrigued by the spoiler or teaser and wants to learn more about this movie, such as the details, plot, rating, etc. His main motive is to find a platform where he can easily search for that movie and see all the details. Because of how interesting the movie looked on TikTok, he wanted to find out more, so when he searched for this movie on a platform like Netflix or any other platform, he was able to access detailed information about the movie's plot, cast, and rating, helping him decide whether to watch it or not.
+
+User Query: "I am looking for a movie I saw on Tiktok with an interesting trailer. Can you help me find more details about it, like the plot, cast, rating, etc."  Thank you!
+
 
 # Features and Functionalities<a id="features"></a>
 
