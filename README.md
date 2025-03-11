@@ -1,7 +1,7 @@
 ## Table of Contents
 - [Purpose of Project](#purpose)
-- [Target Audience](target-audience)
-- [User Query](user-query)
+- [Target Audience](#target-audience)
+- [User Query](#user-query)
 - [Features and Functionalities](#features)
 - [Technologies used](#technologies)
 - [Future Enhancements](#future-enhancements)
