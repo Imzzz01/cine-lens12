@@ -19,7 +19,7 @@
 - [Gant Chart](https://1drv.ms/x/c/4825e675d30aceda/EfiedI_ICOpJopS4BJ0eRKwB5wiZRHm7Uah5UheRfxJrqA?e=4OMedM)
 
    
-- [Test Plan](https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=nyPEjN)
+- [Test Plan](https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=WdFvsJ)
 
 
 #README: CineLens(http://localhost:5501/) [CineLens]
