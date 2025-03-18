@@ -1,4 +1,4 @@
-
+/*global $, document, alert, Swal, console, localStorage, button,*/
 
 
 const OMDbApiKey = "2fee485b"; //OMDB API key for fetching data
@@ -85,6 +85,8 @@ $("#back-to-recommendations-btn").click(function (){
    },
             method: "GET",
             success: function(data) {
+                const movieSelect = $("#movie-select");
+                movieSelect.empty(); // Clear previous movies
                 if (data.Response === "True") {
                     const movies = data.Search;
                     const movieSelect = $("#movie-select");
@@ -99,7 +101,7 @@ $("#back-to-recommendations-btn").click(function (){
         });
 
     } else {
-        console.error("No movies found.");
+        movieSelect.append("<option value=''>No movies found</option>");
     }
 },
   url: `https://www.omdbapi.com/?s=${query}
@@ -252,6 +254,7 @@ $("#movie-results").html("<p>Error fetching data. Please try again later.</p>");
             if(data.Response === "True") {
                 displayMovies(data.Search);
             } else {
+                console.error("No movies found:", data.Error);
         $("#movie-results").html("<p>No movies found. Please try again.</p>");
             }
             },
@@ -423,10 +426,15 @@ Swal.fire("Removed!",`${title} has been removed from your favorites.`,"info");
 
 function updateFavoriteButton(imdbID) {
     const favoriteButton = $("#favorite-button");
+    if(favoriteButton.length === 0) {
+        console.error("Favorite button not found.");
+        return;
+    }
+    
     if(isFavorite(imdbID)) {
-        button.text("Remove from Favorites");
+        favoriteButton.text("Remove from Favorites");
     } else {
-        button.text("Add to Favorites");
+        favoriteButton.text("Add to Favorites");
 
     }
 }
