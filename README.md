@@ -9,17 +9,18 @@
 - [Internal and External Code](#internal-and-external-code)
 - [Validation](#validator)
 - [Commit Messages](#internal-and-external-code)
+- 
 - [Principles of Manual and Automated Testing](#principles-of-manual-and-automated-testing)
 - [Finished Project](#finished-project)
 - [Deployment](#deployment)
 
 ## Links For UX Design | Gant chart | Test Plan
-- [UX Design : Wireframe](https://app.diagrams.net/?libs=general;mockups#W4825E675D30ACEDA%2F4825E675D30ACEDA!s1169167e4693446bb66b12b80a7a3ab2#%7B%22pageId%22%3A%22f1b7ffb7-ca1e-a977-7cf5-a751b3c06c05%22%7D)
+- [UX Design](https://app.diagrams.net/?libs=general;mockups#W4825E675D30ACEDA%2F4825E675D30ACEDA!s1169167e4693446bb66b12b80a7a3ab2#%7B%22pageId%22%3A%22f1b7ffb7-ca1e-a977-7cf5-a751b3c06c05%22%7D)
    
 - [Gant Chart](https://1drv.ms/x/c/4825e675d30aceda/EfiedI_ICOpJopS4BJ0eRKwB5wiZRHm7Uah5UheRfxJrqA?e=4OMedM)
 
    
-- [3.2 | 3.4 | 3.5 Test Plan](https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=nyPEjN)
+- [Test Plan](https://1drv.ms/w/c/4825e675d30aceda/EclbvSjMwedIm5xbLyPRkigBwNP-CqiJ3agtAoVuy3-TQw?e=nyPEjN)
 
 
 #README: CineLens(http://localhost:5501/) [CineLens]
