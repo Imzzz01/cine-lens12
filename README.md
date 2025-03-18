@@ -9,7 +9,6 @@
 - [Internal and External Code](#internal-and-external-code)
 - [Validation](#validator)
 - [Commit Messages](#internal-and-external-code)
-- 
 - [Principles of Manual and Automated Testing](#principles-of-manual-and-automated-testing)
 - [Finished Project](#finished-project)
 - [Deployment](#deployment)
