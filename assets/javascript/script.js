@@ -1,4 +1,4 @@
-/*global $, document, alert, Swal, console, localStorage, button,*/
+
 
 
 const OMDbApiKey = "2fee485b"; //OMDB API key for fetching data
